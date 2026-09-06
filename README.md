@@ -4,8 +4,46 @@
 
 **EN:** An offline interactive 3D historical interpretation of selected locations and events in Northern Vietnam during December 1972. The repository includes the Three.js web experience, Blender sources, scene-generation code, historical-source notes, and reproducible QA evidence.
 
-> Đây là **phục dựng diễn giải có dàn dựng điện ảnh**, không phải phim tư liệu, bản quét hiện trường, mô phỏng vật lý chính xác hay bản sao nguyên trạng từng địa điểm năm 1972.  
+> Đây là **phục dựng diễn giải có dàn dựng điện ảnh**, không phải phim tư liệu, bản quét hiện trường, mô phỏng vật lý chính xác hay bản sao nguyên trạng từng địa điểm năm 1972.
 > This is an **interpretive cinematic reconstruction**, not archival footage, a site scan, an exact physics simulation, or a literal survey-grade recreation of every 1972 location.
+
+<!-- README_GALLERY_START -->
+## Hình ảnh / Screenshots
+
+<p align="center">
+  <img src="docs/images/readme/01-long-bien-opening.png" alt="Cảnh mở đầu cầu Long Biên trên sông Hồng / Long Bien Bridge opening shot" width="100%">
+</p>
+<p align="center"><sub><strong>Cầu Long Biên, Hà Nội / Long Bien Bridge, Hanoi</strong> — cảnh mở đầu định vị không gian / opening establishing shot.</sub></p>
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><img src="docs/images/readme/02-b52-close-view.png" alt="Cận cảnh B-52D trên tầng mây / Close view of B-52D above clouds"><br><sub><strong>B-52D — cận cảnh / close view.</strong></sub></td>
+    <td width="50%" valign="top"><img src="docs/images/readme/03-b52-wide-view.png" alt="Toàn cảnh B-52D trên tầng mây / Wide view of B-52D above clouds"><br><sub><strong>B-52D — toàn cảnh / wide view.</strong></sub></td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="docs/images/readme/04-bach-mai.png" alt="Bệnh viện Bạch Mai trong phục dựng / Bach Mai Hospital reconstruction"><br><sub><strong>Bệnh viện Bạch Mai / Bach Mai Hospital.</strong></sub></td>
+    <td width="50%" valign="top"><img src="docs/images/readme/05-kham-thien-before.png" alt="Phố Khâm Thiên trước cảnh hư hại / Kham Thien Street before damage"><br><sub><strong>Phố Khâm Thiên / Kham Thien Street</strong> — trạng thái trước hư hại / before damage.</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><img src="docs/images/readme/06-kham-thien-aftermath.png" alt="Phố Khâm Thiên sau cảnh hư hại / Kham Thien Street aftermath"><br><sub><strong>Khâm Thiên — hậu cảnh hư hại / aftermath.</strong></sub></td>
+    <td width="50%" valign="top"><img src="docs/images/readme/07-huu-tiep.png" alt="Hồ Hữu Tiệp và mảnh xác máy bay trong phục dựng / Huu Tiep Lake and aircraft wreckage reconstruction"><br><sub><strong>Hồ Hữu Tiệp, Ngọc Hà / Huu Tiep Lake, Ngoc Ha.</strong></sub></td>
+  </tr>
+</table>
+
+<details>
+<summary><strong>Tư liệu & địa điểm / Sources & locations panel</strong></summary>
+
+<p align="center">
+  <img src="docs/images/readme/08-sources-panel.png" alt="Bảng tư liệu và địa điểm trong ứng dụng / In-app sources and locations panel" width="100%">
+</p>
+
+Giao diện phân biệt phần dựa trên nguồn lịch sử với phần dàn dựng. / The interface distinguishes historical-source grounding from interpretive staging.
+
+</details>
+
+> **VI:** Các ảnh trên là ảnh chụp trực tiếp từ bản chạy của dự án. Phần taskbar Windows thừa đã được loại khỏi bản ảnh dùng trong README; ảnh nguồn gốc trên máy không bị sửa.
+> **EN:** These are direct captures of the running project. The extraneous Windows taskbar was removed from the README copies; the original screenshots on the PC were left untouched.
+<!-- README_GALLERY_END -->
 
 ---
 
