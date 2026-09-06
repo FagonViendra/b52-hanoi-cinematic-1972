@@ -1,0 +1,9 @@
+{
+  "reference_area_ft2": 4000,
+  "reference_area_m2": 371.61216,
+  "before_projected_area_m2_with_extrapolated_center": 486.1637,
+  "chord_scale": 0.7643766081260284,
+  "after_projected_area_m2_with_extrapolated_center": 371.61216,
+  "reference": "Virginia Tech B52S05, Basic Geometry slide, B-52 family cross-check; not a D-specific factory blueprint",
+  "source": "https://archive.aoe.vt.edu/mason/Mason_f/B52S05.pdf"
+}

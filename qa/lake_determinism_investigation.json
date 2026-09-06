@@ -1,0 +1,82 @@
+[
+  {
+    "cycle": 0,
+    "kind": "canvas",
+    "nonzero_pixels": 0,
+    "max_delta": 0,
+    "mean_delta": 0.0,
+    "camera_equal": true
+  },
+  {
+    "cycle": 0,
+    "kind": "composited",
+    "nonzero_pixels": 0,
+    "max_delta": 0,
+    "mean_delta": 0.0,
+    "camera_equal": true
+  },
+  {
+    "cycle": 1,
+    "kind": "canvas",
+    "nonzero_pixels": 0,
+    "max_delta": 0,
+    "mean_delta": 0.0,
+    "camera_equal": true
+  },
+  {
+    "cycle": 1,
+    "kind": "composited",
+    "nonzero_pixels": 0,
+    "max_delta": 0,
+    "mean_delta": 0.0,
+    "camera_equal": true
+  },
+  {
+    "cycle": 2,
+    "kind": "canvas",
+    "nonzero_pixels": 0,
+    "max_delta": 0,
+    "mean_delta": 0.0,
+    "camera_equal": true
+  },
+  {
+    "cycle": 2,
+    "kind": "composited",
+    "nonzero_pixels": 0,
+    "max_delta": 0,
+    "mean_delta": 0.0,
+    "camera_equal": true
+  },
+  {
+    "cycle": 3,
+    "kind": "canvas",
+    "nonzero_pixels": 0,
+    "max_delta": 0,
+    "mean_delta": 0.0,
+    "camera_equal": true
+  },
+  {
+    "cycle": 3,
+    "kind": "composited",
+    "nonzero_pixels": 0,
+    "max_delta": 0,
+    "mean_delta": 0.0,
+    "camera_equal": true
+  },
+  {
+    "cycle": 4,
+    "kind": "canvas",
+    "nonzero_pixels": 0,
+    "max_delta": 0,
+    "mean_delta": 0.0,
+    "camera_equal": true
+  },
+  {
+    "cycle": 4,
+    "kind": "composited",
+    "nonzero_pixels": 0,
+    "max_delta": 0,
+    "mean_delta": 0.0,
+    "camera_equal": true
+  }
+]

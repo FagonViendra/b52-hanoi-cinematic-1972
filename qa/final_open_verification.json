@@ -1,0 +1,16 @@
+{
+  "opened_file": "C:\\Users\\fagon\\OneDrive\\Documents\\B52_Hanoi_Cinematic_1972\\index.html",
+  "matching_windows": 1,
+  "foreground_confirmed": true,
+  "set_foreground_result": true,
+  "screenshot": "qa/final_desktop_film.png",
+  "foreground_unchanged_after_capture": true,
+  "window_title": "Những đêm tháng Chạp · Miền Bắc 1972 - Google Chrome",
+  "screenshot_scope": "Only project Chrome window, excluding other desktop applications",
+  "crop": [
+    -8,
+    -8,
+    2568,
+    1400
+  ]
+}

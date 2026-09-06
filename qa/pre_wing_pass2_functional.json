@@ -1,0 +1,262 @@
+{
+  "tests": [
+    {
+      "name": "Offline initialization, no external requests",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Seven chapters and 19 shots",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Reverse seek restores intact geometry and pixels",
+      "pass": true,
+      "detail": {
+        "destroyed_at_148": 34,
+        "same_pixels": true
+      }
+    },
+    {
+      "name": "Lake state deterministic after switching locations",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Pause does not advance time",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Forward five seconds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Back five seconds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Timeline seek",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Playback speed 0.25",
+      "pass": true,
+      "detail": {
+        "elapsed": 1.1234076999971876,
+        "delta": 0.2796499999994406
+      }
+    },
+    {
+      "name": "Playback speed 4",
+      "pass": true,
+      "detail": {
+        "elapsed": 1.1203593000027467,
+        "delta": 4.46639999999106
+      }
+    },
+    {
+      "name": "Single-frame advance",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Single-frame reverse",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Free-view enters paused",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "WASD moves free camera",
+      "pass": true,
+      "detail": {
+        "distance": 7.443200000000019
+      }
+    },
+    {
+      "name": "Orbit drag moves camera",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Film camera restored",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Hide interface",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Restore interface",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Archive opens",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Reference images embedded and decoded",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Reduced-flash option",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Audio starts only after gesture",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Audio can mute",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "PNG capture download",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Camera JSON download",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Quality low renders",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Quality high renders",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Quality balanced renders",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "No geometry/texture growth after warm-up and 70 scene seeks",
+      "pass": true,
+      "detail": {
+        "before": {
+          "geometries": 243,
+          "textures": 24
+        },
+        "after": {
+          "geometries": 243,
+          "textures": 24
+        }
+      }
+    },
+    {
+      "name": "Finite camera after stress seek",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Negative seek clamps",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Overrun seek clamps",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Replay restarts from end",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Mobile landscape playback control visible",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Mobile landscape no horizontal overflow",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Mobile portrait playback control visible",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Mobile portrait no horizontal overflow",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "No JavaScript or shader errors",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "No external runtime fetches",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "errors": [],
+  "network": [],
+  "warmup_memory": {
+    "cold": {
+      "geometries": 242,
+      "textures": 24
+    },
+    "warm": {
+      "geometries": 243,
+      "textures": 24
+    }
+  },
+  "final_state": {
+    "t": 118,
+    "location": "street",
+    "playing": false,
+    "free": false,
+    "speed": 1,
+    "shot": 10,
+    "position": [
+      0.3,
+      2.9,
+      58
+    ],
+    "target": [
+      0,
+      4,
+      -25.5
+    ],
+    "fov": 50,
+    "damageCount": 0,
+    "shaderErrors": [],
+    "drawCalls": 509,
+    "triangles": 384908,
+    "memory": {
+      "geometries": 243,
+      "textures": 24
+    },
+    "programs": 55
+  },
+  "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3050 Ti Laptop GPU (0x000025A0) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "pass_count": 39,
+  "total": 39
+}

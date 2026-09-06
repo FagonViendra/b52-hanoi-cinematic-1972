@@ -1,0 +1,17 @@
+# Reinstallable dependencies
+/node_modules/
+
+# Packaged release artifact (published via GitHub Releases)
+/B52_Hanoi_1972_Project.zip
+
+# Blender automatic backup
+/assets/*.blend1
+
+# Local task/dashboard artifacts
+/.dashboard/
+
+# OS/editor temporary files
+Thumbs.db
+.DS_Store
+*.tmp
+*.bak

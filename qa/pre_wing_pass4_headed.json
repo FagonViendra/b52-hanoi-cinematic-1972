@@ -1,0 +1,38 @@
+{
+  "errors": [],
+  "samples": [],
+  "browser": "152.0.7977.77",
+  "frames": 900,
+  "fps": 135.4177638013271,
+  "p95_ms": 7.100000000000364,
+  "max_ms": 41.80000000000018,
+  "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3050 Ti Laptop GPU (0x000025A0) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "state": {
+    "t": 134.0395,
+    "location": "street",
+    "playing": false,
+    "free": false,
+    "speed": 1,
+    "shot": 12,
+    "position": [
+      0.051123050114364965,
+      3.9646055348019913,
+      74.28277401163685
+    ],
+    "target": [
+      -1,
+      5,
+      -12.903821502556353
+    ],
+    "fov": 50,
+    "damageCount": 34,
+    "shaderErrors": [],
+    "drawCalls": 531,
+    "triangles": 387446,
+    "memory": {
+      "geometries": 241,
+      "textures": 23
+    },
+    "programs": 51
+  }
+}
