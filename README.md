@@ -1,3 +1,15 @@
+# Reference-led v2 update / Bản dựng lại v2
+
+Bản `index.html` hiện tại đã được dựng lại theo ảnh B-52D và cầu Long Biên, thêm khu dân cư dày, mảnh văng/cấu kiện sập và hồ sơ lịch sử riêng từng chương. Xem [README_V2.md](README_V2.md), [QA_V2.md](QA_V2.md) và [REPRODUCE_V2.md](REPRODUCE_V2.md). Các phần giới thiệu/ảnh phía dưới được giữ lại từ bản phát hành cũ để không xóa lịch sử dự án.
+
+The current local build is v2. It includes reference-led aircraft/bridge reconstruction, denser neighborhoods, persistent simulated debris, structural pieces and per-chapter history. It remains an interpretive reconstruction, not a surveyed 1972 city or a validated blast model. Earlier gallery content is retained below as project history. No remote publication was performed as part of this update.
+
+![B-52D v2 rendered in Blender](qa/v2/blender/aircraft_hero.png)
+![Connected riveted bridge joint](qa/v2/blender/bridge_suspended_joint.png)
+![Time sequence of debris and collapse](qa/v2/review/debris_contact.jpg)
+
+---
+
 # Những đêm tháng Chạp — Miền Bắc 1972
 
 **VI:** Bản phục dựng 3D tương tác, chạy ngoại tuyến trong một tệp HTML, tái hiện theo hướng diễn giải một số địa điểm và lát cắt lịch sử ở miền Bắc Việt Nam trong tháng 12/1972. Dự án gồm bản web Three.js, nguồn Blender, mã dựng cảnh, hồ sơ nguồn lịch sử và bộ QA có thể tái lập.

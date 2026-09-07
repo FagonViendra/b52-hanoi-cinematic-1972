@@ -3,7 +3,9 @@ import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 export const seed=19721218;
 export function rng(s=seed){return()=>{s=(Math.imul(1664525,s)+1013904223)>>>0;return s/4294967296;};}
 export const rand=rng(),V=(a)=>new THREE.Vector3(...a),palette={},prototypes={},measurements={};
+const loadedTextures={};
 export function texture(kind,base='#a6a293'){
+ if(loadedTextures[kind]){const t=loadedTextures[kind].clone();t.needsUpdate=true;return t;}
  const c=document.createElement('canvas');c.width=c.height=512;const x=c.getContext('2d'),r=rng(seed+kind.length*173);x.fillStyle=base;x.fillRect(0,0,512,512);
  if(kind==='camo'){
   x.fillStyle='#515b3b';x.fillRect(0,0,512,512);
@@ -33,16 +35,19 @@ function geometry(rec){
  else if(kind==='lathe'){
   const[st,n,x,y]=d,vs=[],fs=[];for(const[z,rx,ry,cy]of st)for(let j=0;j<n;j++){let a=j*2*Math.PI/n;vs.push([x+rx*Math.cos(a),y+cy+ry*Math.sin(a),z]);}for(let i=0;i<st.length-1;i++)for(let j=0;j<n;j++)fs.push([i*n+j,i*n+(j+1)%n,(i+1)*n+(j+1)%n,(i+1)*n+j]);g=meshFrom(vs,fs,true);
  }else if(kind==='airfoil'){
-  const[secs,steps]=d,n=steps*2,vs=[],fs=[];for(const[x,lead,chord,y,thick]of secs)for(let j=0;j<n;j++){let a=j*Math.PI*2/n,f=(1-Math.cos(a))*.5,t=5*thick*chord*(.2969*Math.sqrt(f)-.126*f-.3516*f*f+.2843*f**3-.1015*f**4);vs.push([x,y+(j<=steps?t:-t),lead+f*chord]);}for(let i=0;i<secs.length-1;i++)for(let j=0;j<n;j++){let f=[i*n+j,i*n+(j+1)%n,(i+1)*n+(j+1)%n,(i+1)*n+j];if(secs[0][0]>secs.at(-1)[0])f.reverse();fs.push(f);}g=meshFrom(vs,fs,true);
+  const[secs,steps]=d,n=steps*2,vs=[],fs=[];for(const[x,lead,chord,y,thick]of secs)for(let j=0;j<n;j++){let a=j*Math.PI*2/n,f=(1-Math.cos(a))*.5,t=5*thick*chord*(.2969*Math.sqrt(f)-.126*f-.3516*f*f+.2843*f**3-.1015*f**4);vs.push([x,y+(j<=steps?t:-t),lead+f*chord]);}for(let i=0;i<secs.length-1;i++)for(let j=0;j<n;j++){let f=[i*n+j,i*n+(j+1)%n,(i+1)*n+(j+1)%n,(i+1)*n+j];if(secs[0][0]>secs.at(-1)[0])f.reverse();fs.push(f);}let cap=Array.from({length:n},(_,i)=>(secs.length-1)*n+i),root=Array.from({length:n},(_,i)=>n-1-i);if(secs[0][0]>secs.at(-1)[0]){cap.reverse();root.reverse();}fs.push(root,cap);g=meshFrom(vs,fs,true);
  }else throw Error('Unknown geometry operation: '+kind);
  if(g.index)g=g.toNonIndexed();if(!g.getAttribute('normal'))g.computeVertexNormals();const p=g.getAttribute('position'),n=g.getAttribute('normal'),uv=[];
- for(let i=0;i<p.count;i++){let x=p.getX(i),y=p.getY(i),z=p.getZ(i),nx=Math.abs(n.getX(i)),ny=Math.abs(n.getY(i)),nz=Math.abs(n.getZ(i));if(mat==='air')uv.push(x*.022+z*.007,z*.031+y*.016);else if(ny>nx&&ny>nz)uv.push(x*.23,z*.23);else if(nx>nz)uv.push(z*.23,y*.23);else uv.push(x*.23,y*.23);}
+ for(let i=0;i<p.count;i++){let x=p.getX(i),y=p.getY(i),z=p.getZ(i),nx=Math.abs(n.getX(i)),ny=Math.abs(n.getY(i)),nz=Math.abs(n.getZ(i));let sc=['roofold','roofdark','tilefragment','brickred'].includes(mat)?1:mat==='masonry'?.5:.25;if(mat==='air')uv.push((x+30)/60,1-(z+25)/50);else if(ny>nx&&ny>nz)uv.push(x*sc,z*sc);else if(nx>nz)uv.push(z*sc,y*sc);else uv.push(x*sc,y*sc);}
  g.setAttribute('uv',new THREE.Float32BufferAttribute(uv,2));return g;
 }
 export async function initAssets(data,onProgress){
+ for(const[name,url]of Object.entries(data.textures||{})){let im=new Image();im.src=url;await im.decode();let t=new THREE.Texture(im);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=8;t.needsUpdate=true;loadedTextures[name]=t;}
+
  for(const[name,d]of Object.entries(data.materials)){
-  let opt={color:d.color,roughness:d.rough??.85,metalness:d.metal??0,side:THREE.DoubleSide};if(d.tex){opt.map=texture(d.tex);if(d.tex==='camo')opt.color='#ffffff';else{opt.bumpMap=opt.map;opt.bumpScale=d.tex==='tile'?.10:.035;}}if(d.emissive){opt.emissive=d.emissive;opt.emissiveIntensity=.65;}
+  let opt={color:d.color,roughness:d.rough??.85,metalness:d.metal??0,side:THREE.DoubleSide};if(d.tex){opt.map=texture(d.tex);if(d.tex==='camo')opt.color='#ffffff';else{opt.bumpMap=opt.map;opt.bumpScale=['tile','tilesv2'].includes(d.tex)?.06:.025;}}if(d.emissive){opt.emissive=d.emissive;opt.emissiveIntensity=.65;}
   const m=new THREE.MeshStandardMaterial(opt);m.name=name;palette[name]=m;
+  if(['oldplaster','plastergrey','plasterochre','lime'].includes(name))m.onBeforeCompile=s=>{s.vertexShader=s.vertexShader.replace('#include <common>','#include <common>\nvarying vec3 vLocal;').replace('#include <begin_vertex>','#include <begin_vertex>\nvLocal=position;');s.fragmentShader=s.fragmentShader.replace('#include <common>','#include <common>\nvarying vec3 vLocal;').replace('#include <map_fragment>','#include <map_fragment>\ndiffuseColor.rgb*=.73+.27*smoothstep(.1,1.15,vLocal.y);');};
   if(name==='air')m.onBeforeCompile=(s)=>{s.vertexShader=s.vertexShader.replace('#include <common>','#include <common>\nvarying vec3 localNormal;').replace('#include <beginnormal_vertex>','#include <beginnormal_vertex>\nlocalNormal=objectNormal;');s.fragmentShader=s.fragmentShader.replace('#include <common>','#include <common>\nvarying vec3 localNormal;').replace('#include <map_fragment>','#include <map_fragment>\nfloat underside=1.0-smoothstep(-0.65,-0.15,normalize(localNormal).y);diffuseColor.rgb=mix(diffuseColor.rgb,vec3(0.013,0.019,0.020),underside*0.91);');};
  }
  let index=0;for(const[name,recs]of Object.entries(data.assets)){

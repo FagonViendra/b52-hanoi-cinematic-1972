@@ -1,6 +1,7 @@
+import {CollapseField} from './collapse_v2.js';
 import * as THREE from 'three';
 import {Reflector} from 'three/addons/objects/Reflector.js';
-import {asset,batch,box,wire,textPlane,texture,palette,rng,V} from './geometry.js';
+import {asset,batch,box,wire,textPlane,texture,palette,rng,V,measurements} from './geometry.js';
 import {Blast,Billboards,leafTexture} from './effects.js';
 export const locations={
  bridge:{fog:'#91a6a7',zenith:'#304957',horizon:'#b1b4a8',density:.0021,key:'#ffe2b3',power:3.6,ambient:1.65,center:[0,8,0]},
@@ -49,18 +50,23 @@ export function createWorld(){
  }`;
   let m=new THREE.Mesh(new THREE.PlaneGeometry(w,d),mat);m.rotation.x=-Math.PI/2;m.position.set(...pos);g.add(m);waterMaterials.push(mat);return m;
  }
- function houses(g,list){for(let v=0;v<8;v++){let ps=list.filter((p,i)=>i%8===v);if(ps.length)batch('house'+v,ps,g);}}
+ const layoutAudit={housesByLocation:{},frontageGaps:[],bridgeJoin:0};
+ function houses(g,list,lod=false){for(let v=0;v<8;v++){let ps=list.filter((p,i)=>(p.v??i%8)===v);if(ps.length)batch((lod?'townlod':'house')+v,ps,g);}layoutAudit.housesByLocation[g.name]=(layoutAudit.housesByLocation[g.name]||0)+list.length;}
+ const houseDims=[[4.25,12,3.35],[4.7,13.4,6.35],[5.45,15,6.7],[3.95,11.3,3.7],[5.1,14,6.1],[4.35,12.8,6.5],[5.7,15.7,6.6],[4.85,13,3.8]];
+ function frontage(side,zstart,zend,streetEdge,y=0,seed=1){let list=[],z=zstart,k=0;while(z<zend){let v=(k*3+seed)%8,w=houseDims[v][0],d=houseDims[v][1],gap=k%13===12?1.25:.075;if(z+w>zend)break;list.push({v,p:[side*(streetEdge+d/2),y,z+w/2],ry:side<0?Math.PI/2:-Math.PI/2,s:1});layoutAudit.frontageGaps.push(gap);z+=w+gap;k++;}return list;}
+
  function cable(g,a,b){let mid=V(a).add(V(b)).multiplyScalar(.5);mid.y-=.7;let curve=new THREE.CatmullRomCurve3([V(a),mid,V(b)]),m=new THREE.Mesh(new THREE.TubeGeometry(curve,12,.023,4,false),palette.dark);g.add(m);}
- // RED RIVER: a deliberately shortened bridge segment, not a surveyed whole.
- let bridge=root('bridge');ground(bridge,-3);
- water(bridge,900,1000,[0,0,0],'#5b7778');batch('bridge',Array.from({length:7},(_,i)=>({p:[(i-3)*40,0,0]})),bridge);
- for(let side of[-1,1]){box(bridge,[side*390,2.4,0],[460,10,1000],groundMat);let ps=[];for(let j=0;j<45;j++)ps.push({p:[side*(175+(j%5)*20),7.4,(Math.floor(j/5)-4)*26],ry:side>0?-Math.PI/2:Math.PI/2,s:.9+r()*.25});houses(bridge,ps);trees(bridge,Array.from({length:22},(_,i)=>({p:[side*(162+r()*45),7.4,(i-11)*25],s:1.0+r()*.6})));}
- let barge=asset('boat');barge.position.set(18,.45,68);barge.rotation.y=.32;bridge.add(barge);batch('bicycle',[{p:[55,7.85,2.1],ry:Math.PI/2,s:.85}],bridge);
+ // RED RIVER: connected representative original-type assembly, not an exact 1972 survey.
+ let bridge=root('bridge');ground(bridge,-3);water(bridge,1000,1500,[0,0,0],'#67746a');bridge.add(asset('bridge'));
+ for(let side of[-1,1]){box(bridge,[side*390,2.4,0],[410,10,1300],groundMat);let ps=[];
+  for(let row=0;row<8;row++)ps.push(...frontage(side,-240,240,195+row*19,7.4,row+1));houses(bridge,ps,true);
+  trees(bridge,Array.from({length:26},(_,i)=>({p:[side*(190+r()*30),7.4,(i-13)*24],s:1+r()*.45})));}
+ let barge=asset('boat');barge.position.set(18,.45,68);barge.rotation.y=.32;bridge.add(barge);batch('bicycle',[{p:[55,7.75,3.2],ry:Math.PI/2,s:.85}],bridge);
  // AIRCRAFT: a camera-relative exterior tableau above an illustrative cloud deck.
  let air=root('air'),plane=asset('b52');plane.position.y=92;air.add(plane);let wingmen=[];for(const p of[[96,99,145],[-128,103,245]]){let a=asset('b52');a.position.set(...p);air.add(a);wingmen.push(a);}
  const bay=new THREE.Group();plane.add(bay);box(bay,[0,-1.85,.2],[2.5,.035,8.6],'dark');let doors=[];for(let s of[-1,1]){let h=new THREE.Group();h.position.set(s*1.3,-1.82,.2);let d=asset('baydoor');d.position.x=-s*.69;h.add(d);plane.add(h);doors.push({h,s});}
  const bombs=[];for(let i=0;i<21;i++){let b=asset('bomb');b.rotation.x=-Math.PI/2;air.add(b);bombs.push(b);}
- const clouds=new Billboards(65,'#cad2cf');air.add(clouds.mesh);let cloudData=Array.from({length:65},()=>({p:[(r()-.5)*1500,4+r()*23,(r()-.5)*1400],sz:110+r()*160,a:(r()-.5)*.2}));
+ const clouds=new Billboards(65,'#cad2cf',false,true);air.add(clouds.mesh);let cloudData=Array.from({length:65},()=>({p:[(r()-.5)*1500,4+r()*23,(r()-.5)*1400],sz:110+r()*160,a:(r()-.5)*.2}));
  // RIVER PORT: period vocabulary, not the plan of a named target or a sortie.
  let port=root('port');ground(port,-1.2);water(port,700,850,[330,0,0],'#50696d');box(port,[-108,.2,0],[220,2.0,600],'stone');box(port,[0,.2,0],[2,3,600],'stone');
  batch('warehouse',Array.from({length:7},(_,i)=>({p:[-35-(i%2)*34,1.3,(i-3)*42],ry:0,s:.9})),port);batch('crane',[{p:[-8,1.3,-39],ry:Math.PI/2},{p:[-8,1.3,45],ry:Math.PI/2,s:.85}],port);batch('chimney',[{p:[-91,1.3,-64]},{p:[-122,1.3,27],s:.7}],port);
@@ -73,16 +79,22 @@ export function createWorld(){
  box(hospital,[0,.05,18],[12,.07,22],roadMat);blasts.push(new Blast(hospital,[25,0,-8],98,22,1.1),new Blast(hospital,[-14,0,-33],100.5,23,.85));
  // KHAM THIEN: a finite tiled-house streetscape, reversible damage states.
  let street=root('street');ground(street);box(street,[0,.006,0],[13,.035,210],roadMat);for(let side of[-1,1])box(street,[side*6.8,.13,0],[.4,.27,210],'stone');
- let rows=[];for(let side of[-1,1])for(let j=0;j<17;j++){let v=(j+(side===1?3:0))%8,z=(j-8)*8.5,ry=(side<0?Math.PI/2:-Math.PI/2)+(r()-.5)*.025;rows.push({p:[side*(11.7+(v%4)*.19+(r()-.5)*.6),0,z],ry,v,s:1,hit:126+Math.abs(z+17)*.031+(side>0?.65:0)});}
+ const impactEvents=[{p:[-9,0,-23],t:126},{p:[10,0,2],t:127.1},{p:[-9,0,29],t:128.4},{p:[10,0,-53],t:130}];
+ let rows=[...frontage(-1,-95,98,7.0,0,1),...frontage(1,-95,98,7.0,0,4)];
+ for(const p of rows){let nearest=impactEvents.map(e=>({e,d:Math.hypot(p.p[0]-e.p[0],p.p[2]-e.p[2])})).sort((a,b)=>a.d-b.d)[0];p.hit=nearest.d<25?nearest.e.t+.12+nearest.d*.018:Infinity;}
  for(let v=0;v<8;v++){let ps=rows.filter(p=>p.v===v);damage.push({ps,intact:batch('house'+v,ps,street),ruin:batch('ruin'+v,ps,street),states:[]});}
- // Background blocks remain intact, keeping the damage footprint visually bounded.
- houses(street,Array.from({length:32},(_,i)=>({p:[(i%2===0?-1:1)*(31+(i%4)*3),0,(Math.floor(i/2)-8)*11],ry:i%2===0?Math.PI/2:-Math.PI/2,s:.9+r()*.25})));
-
- houses(street,Array.from({length:22},(_,i)=>({p:[(i-11)*9,0,-100-(i%3)*13],ry:.03*(i%3),s:.8+(i%4)*.075})));
+ const collapse=new CollapseField(street,rows,houseDims);
+ layoutAudit.housesByLocation.street=rows.length;
+ let back=[];for(let side of[-1,1])for(let row=0;row<7;row++)back.push(...frontage(side,-150,150,28+row*18,0,row+2));houses(street,back,true);
+ // Dense blocks closing the far street vista, with occasional narrow alleys.
+ let far=[];for(let row=0;row<4;row++)for(let i=0;i<38;i++){let v=(i+row)%8;far.push({v,p:[(i-19)*5.3,0,-115-row*19],ry:0,s:1});}houses(street,far,true);
  let poles=[];for(let side of[-1,1])for(let j=0;j<5;j++)poles.push({p:[side*6.2,0,(j-2)*32],ry:Math.PI/2});batch('pole',poles,street);for(let side of[-1,1])for(let j=0;j<4;j++)for(let off of[-.6,.6])cable(street,[side*6.2,8.5,(j-2)*32+off],[side*6.2,8.5,(j-1)*32+off]);
  trees(street,[{p:[-7.4,0,-57],s:.85},{p:[7.4,0,54],s:.85},{p:[-29,0,9],s:1.3},{p:[25,0,-47],s:1.2}]);batch('bicycle',[{p:[-6.4,.02,40],ry:.13},{p:[6.4,.02,-32],ry:-.1}],street);
  for(const[text,z,side]of[['TẠP HÓA',40,-1],['HIỆU SÁCH',-38,1],['SỬA XE',18,-1]]){let t=textPlane(text,3.2,.75,'bold 72px Georgia','#d9ceae','#343e35');t.rotation.y=side<0?Math.PI/2:-Math.PI/2;t.position.set(side*6.95,2.8,z);street.add(t);t.userData.hit=126+Math.abs(z+17)*.031;}
- for(const[p,t,s]of[[[-10,0,-23],126,1.1],[[11,0,2],127.1,1.0],[[-9,0,29],128.4,.9],[[10,0,-53],130,1.0]])blasts.push(new Blast(street,p,t,Math.floor(t*7),s));
+ for(const e of impactEvents){
+  const colliders=rows.filter(p=>!Number.isFinite(p.hit)&&Math.hypot(p.p[0]-e.p[0],p.p[2]-e.p[2])<45).map(p=>{let [w,d,h]=houseDims[p.v];return{min:[p.p[0]-d/2-e.p[0],0,p.p[2]-w/2-e.p[2]],max:[p.p[0]+d/2-e.p[0],h,p.p[2]+w/2-e.p[2]]};});
+  blasts.push(new Blast(street,e.p,e.t,Math.floor(e.t*7),1,{colliders}));}
+
  // NGOC HA / HUU TIEP: no later memorial fencing or modern towers.
  let lake=root('lake');ground(lake,-2);for(const[p,s]of[[[0,-.05,29],[150,1.7,28]],[[0,-.05,-29],[150,1.7,28]],[[43,-.05,0],[36,1.7,30]],[[-43,-.05,0],[36,1.7,30]]])box(lake,p,s,groundMat);
  for(const[p,s]of[[[0,.27,15.3],[52,.65,.6]],[[0,.27,-15.3],[52,.65,.6]],[[25.9,.27,0],[.6,.65,31]],[[-25.9,.27,0],[.6,.65,31]]])box(lake,p,s,'stone');
@@ -95,9 +107,11 @@ export function createWorld(){
  base+=texture2DProj(tDiffuse,uv+vec4(.0006*uv.w,.0004*uv.w,0.,0.))*.3;
  base+=texture2DProj(tDiffuse,uv-vec4(.0006*uv.w,.0004*uv.w,0.,0.))*.3;`)
  .replace('blendOverlay( base.rgb, color )','mix(blendOverlay(base.rgb,color),vec3(.12,.16,.12),.26)');
+ const mirrorRender=mirror.onBeforeRender;mirror.onBeforeRender=function(r,s,c,...a){if(s.overrideMaterial)return;return mirrorRender.call(this,r,s,c,...a);};
  mirror.rotation.x=-Math.PI/2;mirror.position.y=.13;lake.add(mirror);
  const wreck=asset('wreck');wreck.position.set(-1,.08,1);wreck.rotation.y=.28;lake.add(wreck);
- let lh=[];for(let side of[-1,1])for(let j=0;j<8;j++)lh.push({p:[(j-3.5)*8.1,.8,side*24],ry:side>0?Math.PI:0,s:.85+(j%3)*.075});for(let side of[-1,1])for(let j=0;j<3;j++)lh.push({p:[side*34,.8,(j-1)*10],ry:side>0?-Math.PI/2:Math.PI/2,s:.9});houses(lake,lh);
+ let lh=[];for(let side of[-1,1]){let x=-26,k=0;while(x<25){let v=(k*3+(side>0?1:4))%8,w=houseDims[v][0],d=houseDims[v][1];if(x+w>26)break;lh.push({v,p:[x+w/2,.8,side*(17+d/2)],ry:side>0?Math.PI:0,s:1});x+=w+.08;k++;}lh.push(...frontage(side,-16,16,28,.8,2));}houses(lake,lh);
+ let lb=[];for(let side of[-1,1])for(let row=0;row<5;row++)lb.push(...frontage(side,-125,125,47+row*18,.8,row+1));houses(lake,lb,true);
  trees(lake,[{p:[-24,.8,15],s:1.2},{p:[25,.8,-15],s:1.15},{p:[-29,.8,-14],s:1.4},{p:[23,.8,22],s:.9},{p:[-3,.8,-18],s:.7}]);batch('bicycle',[{p:[16,.8,17],ry:1.1}],lake);
  let ripples=[];for(let j=0;j<6;j++){let m=new THREE.Mesh(new THREE.RingGeometry(2.0+j*.9,2.012+j*.9,72),new THREE.MeshBasicMaterial({color:'#99ad8e',transparent:true,opacity:.13,depthWrite:false,side:THREE.DoubleSide}));m.rotation.x=-Math.PI/2;m.position.set(-1,.142,1);lake.add(m);ripples.push(m);}
  let current='',quality='balanced';const temp=new THREE.Object3D();
@@ -110,17 +124,17 @@ export function createWorld(){
   if(current==='air'){
    plane.rotation.z=Math.sin(t*.20)*.025;plane.rotation.x=Math.sin(t*.13)*.006;plane.position.y=92+Math.sin(t*.3)*.15;
    let open=Math.max(0,Math.min(1,(t-44)/1.5));for(const d of doors)d.h.rotation.z=d.s*open*1.48;
-   for(let i=0;i<bombs.length;i++){let age=t-(46.3+i*.32),b=bombs[i];b.visible=age>=0&&age<5.7;if(b.visible){b.position.set((i%3-1)*.48,89.7-4.1*age*age,.2+(i%7-3)*.7+age*.25);b.rotation.x=-Math.PI/2+Math.min(age,2)*.06;b.rotation.z=Math.sin(age+i)*.07;}}
+   for(let i=0;i<bombs.length;i++){let age=t-(46.3+i*.32),b=bombs[i];b.visible=age>=0&&age<5.7;if(b.visible){b.position.set((i%3-1)*.48,89.7-4.905*age*age,.2+(i%7-3)*.7+age*.25);b.rotation.x=-Math.min(.98,age*.26);b.rotation.z=Math.sin(age+i)*.07;}}
    for(let i=0;i<cloudData.length;i++){let d=cloudData[i],p=[d.p[0],d.p[1],d.p[2]+(t-26)*5];clouds.set(i,p,d.sz,.58,camera,d.a,.30);}clouds.finish();
   }
   if(current==='hospital'){injuredWard.visible=t<98.25;fallenWard.visible=t>=98.25;}
-  if(current==='street'||current==='after'){
-   for(const d of damage){d.ps.forEach((p,i)=>{let hit=t>=p.hit;if(d.states[i]===hit)return;d.states[i]=hit;for(const[g,show]of[[d.intact,!hit],[d.ruin,hit]]){temp.position.set(...p.p);temp.rotation.set(0,p.ry,0);temp.scale.setScalar(show?p.s:0);temp.updateMatrix();g.children.forEach(m=>{m.setMatrixAt(i,temp.matrix);m.instanceMatrix.needsUpdate=true;});}});}
+  if(current==='street'||current==='after'){collapse.update(t);
+   for(const d of damage){d.ps.forEach((p,i)=>{let hit=t>=p.hit;if(d.states[i]===hit)return;d.states[i]=hit;for(const[g,show]of[[d.intact,!hit],[d.ruin,hit]]){temp.position.set(...p.p);temp.rotation.set(0,p.ry,0);temp.scale.setScalar(show?p.s:0);temp.updateMatrix();g.children.forEach(m=>{m.setMatrixAt(i,temp.matrix);m.instanceMatrix.needsUpdate=true;});}});d.intact.visible=d.states.some(hit=>!hit);d.ruin.visible=d.states.some(Boolean);}
    for(const ob of street.children)if(ob.userData.hit)ob.visible=t<ob.userData.hit;
   }
-  let pulse=0;for(const blast of blasts)if(blast.root.parent.visible){blast.update(t,camera,gentle);let age=t-blast.start,p=age>=0?Math.exp(-age*2.4)*blast.scale:0;if(p>pulse){pulse=p;flash.position.copy(blast.root.position);flash.position.y+=5;}}flash.intensity=pulse*(gentle?18:100);
+  let pulse=0;for(const blast of blasts)if(blast.root.parent.visible){blast.update(t,camera,gentle);let age=t-blast.start,p=age>=0?Math.exp(-age*10)*blast.scale:0;if(p>pulse){pulse=p;flash.position.copy(blast.root.position);flash.position.y+=5;}}flash.intensity=pulse*(gentle?22:170);
   if(current==='lake')ripples.forEach((m,i)=>{m.scale.setScalar(1+Math.sin(t*.4+i)*.04);m.material.opacity=.08+Math.sin(t*.5+i)*.025;});
  }
  function setQuality(q){quality=q;key.castShadow=q!=='low'&&current!=='air';mirror.visible=current==='lake'&&q!=='low';if(q==='low'){if(!lake.userData.flatwater)lake.userData.flatwater=water(lake,51.2,30,[0,.13,0],'#536947');lake.userData.flatwater.visible=true;}else if(lake.userData.flatwater)lake.userData.flatwater.visible=false;}
- setLocation('bridge');return{scene,roots,key,hemi,sky,plane,mirror,blasts,setLocation,update,setQuality,get location(){return current;},get damageCount(){return damage.reduce((n,d)=>n+d.states.filter(Boolean).length,0);}};
+ setLocation('bridge');return{scene,roots,key,hemi,sky,plane,mirror,blasts,layoutAudit,collapse,setLocation,update,setQuality,get location(){return current;},get damageCount(){return damage.reduce((n,d)=>n+d.states.filter(Boolean).length,0);}};
 }

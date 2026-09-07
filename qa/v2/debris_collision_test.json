@@ -1,0 +1,14 @@
+{
+  "gravity": 9.81,
+  "integrationHz": 120,
+  "samplingHz": 30,
+  "fragmentCount": 280,
+  "floorContacts": 734,
+  "wallContacts": 102,
+  "roofContacts": 10,
+  "floorViolations": 0,
+  "maxContactEnergyRatio": 1,
+  "settledAtEnd": 280,
+  "centersInside": 0,
+  "nonFinite": 0
+}

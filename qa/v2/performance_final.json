@@ -1,0 +1,513 @@
+{
+  "build_sha256": "f64699ad5909280194b247728a0f3380a902b88dd0b2f99b71646b25c92e9f33",
+  "segments": [
+    {
+      "window": "headless",
+      "quality": "balanced",
+      "scene": "bridge",
+      "timeline_start": 4,
+      "viewport": [
+        1920,
+        1080
+      ],
+      "dpr": 1,
+      "render_resolution": [
+        1920,
+        1080
+      ],
+      "wall_seconds": 4.008503799999744,
+      "frames": 577,
+      "raf_fps": 143.99440992238775,
+      "raf_p95_ms": 7,
+      "raf_max_ms": 7.100000000000364,
+      "frames_over50ms": 0,
+      "gpu_supported": true,
+      "gpu_samples": 58,
+      "gpu_median_ms": 2.812416,
+      "gpu_p95_ms": 4.265984,
+      "gpu_max_ms": 4.634624,
+      "cpu_submit_p95_ms": 4,
+      "state": {
+        "t": 9.0185,
+        "location": "bridge",
+        "playing": true,
+        "free": false,
+        "speed": 1,
+        "shot": 0,
+        "position": [
+          -101.46357903291026,
+          25.353668350591583,
+          132.9451759282537
+        ],
+        "target": [
+          8.518213883062941,
+          10,
+          0
+        ],
+        "fov": 46,
+        "damageCount": 46,
+        "visibleFragments": 0,
+        "shaderErrors": [],
+        "drawCalls": 317,
+        "triangles": 1120655,
+        "memory": {
+          "geometries": 315,
+          "textures": 42
+        },
+        "programs": 69
+      }
+    },
+    {
+      "window": "headless",
+      "quality": "balanced",
+      "scene": "aircraft",
+      "timeline_start": 29,
+      "viewport": [
+        1920,
+        1080
+      ],
+      "dpr": 1,
+      "render_resolution": [
+        1920,
+        1080
+      ],
+      "wall_seconds": 4.008407799999986,
+      "frames": 577,
+      "raf_fps": 143.99440992238775,
+      "raf_p95_ms": 7,
+      "raf_max_ms": 7.100000000000364,
+      "frames_over50ms": 0,
+      "gpu_supported": true,
+      "gpu_samples": 57,
+      "gpu_median_ms": 2.615296,
+      "gpu_p95_ms": 4.017152,
+      "gpu_max_ms": 4.411392,
+      "cpu_submit_p95_ms": 1,
+      "state": {
+        "t": 34.02680000000075,
+        "location": "air",
+        "playing": true,
+        "free": false,
+        "speed": 1,
+        "shot": 2,
+        "position": [
+          58.246445599529764,
+          110.26540831992412,
+          -66.65023814360865
+        ],
+        "target": [
+          0,
+          93,
+          -0.7434809310079675
+        ],
+        "fov": 43,
+        "damageCount": 46,
+        "visibleFragments": 0,
+        "shaderErrors": [],
+        "drawCalls": 24,
+        "triangles": 63928,
+        "memory": {
+          "geometries": 315,
+          "textures": 42
+        },
+        "programs": 73
+      }
+    },
+    {
+      "window": "headless",
+      "quality": "balanced",
+      "scene": "dense_street",
+      "timeline_start": 115,
+      "viewport": [
+        1920,
+        1080
+      ],
+      "dpr": 1,
+      "render_resolution": [
+        1920,
+        1080
+      ],
+      "wall_seconds": 4.008493300001646,
+      "frames": 576,
+      "raf_fps": 143.74485288612718,
+      "raf_p95_ms": 7,
+      "raf_max_ms": 13.799999999999272,
+      "frames_over50ms": 0,
+      "gpu_supported": true,
+      "gpu_samples": 57,
+      "gpu_median_ms": 4.294656,
+      "gpu_p95_ms": 5.407744,
+      "gpu_max_ms": 6.53312,
+      "cpu_submit_p95_ms": 5.299999998882413,
+      "state": {
+        "t": 120.02819999999926,
+        "location": "street",
+        "playing": true,
+        "free": false,
+        "speed": 1,
+        "shot": 10,
+        "position": [
+          0.40371865190453177,
+          3.039543519010439,
+          53.134756581700586
+        ],
+        "target": [
+          0,
+          4,
+          -28.175853081239943
+        ],
+        "fov": 50,
+        "damageCount": 0,
+        "visibleFragments": 0,
+        "shaderErrors": [],
+        "drawCalls": 705,
+        "triangles": 1765215,
+        "memory": {
+          "geometries": 318,
+          "textures": 45
+        },
+        "programs": 76
+      }
+    },
+    {
+      "window": "headless",
+      "quality": "balanced",
+      "scene": "four_impacts_and_collapse",
+      "timeline_start": 130.3,
+      "viewport": [
+        1920,
+        1080
+      ],
+      "dpr": 1,
+      "render_resolution": [
+        1920,
+        1080
+      ],
+      "wall_seconds": 4.006466799999544,
+      "frames": 385,
+      "raf_fps": 96.24278179136567,
+      "raf_p95_ms": 14,
+      "raf_max_ms": 20.900000000001455,
+      "frames_over50ms": 0,
+      "gpu_supported": true,
+      "gpu_samples": 39,
+      "gpu_median_ms": 7.360512,
+      "gpu_p95_ms": 10.218496,
+      "gpu_max_ms": 12.173312,
+      "cpu_submit_p95_ms": 8.599999999627471,
+      "state": {
+        "t": 135.32220000000112,
+        "location": "street",
+        "playing": true,
+        "free": false,
+        "speed": 1,
+        "shot": 12,
+        "position": [
+          0.12228987121706061,
+          3.913101780358694,
+          71.86995457113198
+        ],
+        "target": [
+          -1,
+          5,
+          -14.173759709571765
+        ],
+        "fov": 50,
+        "damageCount": 46,
+        "visibleFragments": 1120,
+        "shaderErrors": [],
+        "drawCalls": 979,
+        "triangles": 2147667,
+        "memory": {
+          "geometries": 321,
+          "textures": 45
+        },
+        "programs": 82
+      }
+    },
+    {
+      "window": "headless",
+      "quality": "balanced",
+      "scene": "lake_reflection",
+      "timeline_start": 169,
+      "viewport": [
+        1920,
+        1080
+      ],
+      "dpr": 1,
+      "render_resolution": [
+        1920,
+        1080
+      ],
+      "wall_seconds": 4.014031500000783,
+      "frames": 574,
+      "raf_fps": 142.99593931391848,
+      "raf_p95_ms": 7,
+      "raf_max_ms": 14,
+      "frames_over50ms": 0,
+      "gpu_supported": true,
+      "gpu_samples": 58,
+      "gpu_median_ms": 5.255167999999999,
+      "gpu_p95_ms": 6.697984,
+      "gpu_max_ms": 8.619008,
+      "cpu_submit_p95_ms": 6.900000000372529,
+      "state": {
+        "t": 174.03339999999852,
+        "location": "lake",
+        "playing": true,
+        "free": false,
+        "speed": 1,
+        "shot": 15,
+        "position": [
+          6.278043011141943,
+          4.023807610261893,
+          15.951534967031687
+        ],
+        "target": [
+          -1,
+          1.8,
+          1
+        ],
+        "fov": 47,
+        "damageCount": 46,
+        "visibleFragments": 0,
+        "shaderErrors": [],
+        "drawCalls": 721,
+        "triangles": 967759,
+        "memory": {
+          "geometries": 321,
+          "textures": 45
+        },
+        "programs": 83
+      }
+    },
+    {
+      "window": "headless",
+      "quality": "high",
+      "scene": "four_impacts_and_collapse",
+      "timeline_start": 130.3,
+      "viewport": [
+        1920,
+        1080
+      ],
+      "dpr": 1,
+      "render_resolution": [
+        1920,
+        1080
+      ],
+      "wall_seconds": 4.010548000000199,
+      "frames": 320,
+      "raf_fps": 79.71899055828202,
+      "raf_p95_ms": 14,
+      "raf_max_ms": 20.900000000001455,
+      "frames_over50ms": 0,
+      "gpu_supported": true,
+      "gpu_samples": 32,
+      "gpu_median_ms": 9.063424,
+      "gpu_p95_ms": 10.056704,
+      "gpu_max_ms": 11.890688,
+      "cpu_submit_p95_ms": 9.100000001490116,
+      "state": {
+        "t": 135.34609999999964,
+        "location": "street",
+        "playing": true,
+        "free": false,
+        "speed": 1,
+        "shot": 12,
+        "position": [
+          0.12364307705443026,
+          3.912122242005575,
+          71.82407369860428
+        ],
+        "target": [
+          -1,
+          5,
+          -14.197907459999998
+        ],
+        "fov": 50,
+        "damageCount": 46,
+        "visibleFragments": 1120,
+        "shaderErrors": [],
+        "drawCalls": 979,
+        "triangles": 2147667,
+        "memory": {
+          "geometries": 321,
+          "textures": 45
+        },
+        "programs": 83
+      }
+    },
+    {
+      "window": "headless",
+      "quality": "low",
+      "scene": "four_impacts_and_collapse",
+      "timeline_start": 130.3,
+      "viewport": [
+        1920,
+        1080
+      ],
+      "dpr": 1,
+      "render_resolution": [
+        1536,
+        864
+      ],
+      "wall_seconds": 4.017076800000723,
+      "frames": 533,
+      "raf_fps": 132.78525161933234,
+      "raf_p95_ms": 13.900000000001455,
+      "raf_max_ms": 14,
+      "frames_over50ms": 0,
+      "gpu_supported": true,
+      "gpu_samples": 53,
+      "gpu_median_ms": 3.883008,
+      "gpu_p95_ms": 4.996096,
+      "gpu_max_ms": 5.79072,
+      "cpu_submit_p95_ms": 3.599999999627471,
+      "state": {
+        "t": 135.34340000000037,
+        "location": "street",
+        "playing": true,
+        "free": false,
+        "speed": 1,
+        "shot": 12,
+        "position": [
+          0.12381095946423328,
+          3.9120007557524508,
+          71.81838197181162
+        ],
+        "target": [
+          -1,
+          5,
+          -14.200903192456133
+        ],
+        "fov": 50,
+        "damageCount": 46,
+        "visibleFragments": 1120,
+        "shaderErrors": [],
+        "drawCalls": 270,
+        "triangles": 539376,
+        "memory": {
+          "geometries": 321,
+          "textures": 36
+        },
+        "programs": 83
+      }
+    },
+    {
+      "window": "headed",
+      "quality": "balanced",
+      "scene": "four_impacts_and_collapse",
+      "timeline_start": 130.3,
+      "viewport": [
+        1920,
+        1080
+      ],
+      "dpr": 1,
+      "render_resolution": [
+        1920,
+        1080
+      ],
+      "wall_seconds": 5.005994199998895,
+      "frames": 580,
+      "raf_fps": 115.83320019172393,
+      "raf_p95_ms": 14,
+      "raf_max_ms": 14.100000000000364,
+      "frames_over50ms": 0,
+      "gpu_supported": true,
+      "gpu_samples": 58,
+      "gpu_median_ms": 6.652928,
+      "gpu_p95_ms": 8.994816,
+      "gpu_max_ms": 10.025984,
+      "cpu_submit_p95_ms": 6.300000000745058,
+      "state": {
+        "t": 136.33169999999927,
+        "location": "street",
+        "playing": true,
+        "free": false,
+        "speed": 1,
+        "shot": 12,
+        "position": [
+          0.19244335004060234,
+          3.8637140737340596,
+          69.50531806959121
+        ],
+        "target": [
+          -1,
+          5,
+          -15.418329834441886
+        ],
+        "fov": 50,
+        "damageCount": 46,
+        "visibleFragments": 1120,
+        "shaderErrors": [],
+        "drawCalls": 979,
+        "triangles": 2147667,
+        "memory": {
+          "geometries": 318,
+          "textures": 42
+        },
+        "programs": 75
+      }
+    },
+    {
+      "window": "headed",
+      "quality": "high",
+      "scene": "four_impacts_and_collapse",
+      "timeline_start": 130.3,
+      "viewport": [
+        1920,
+        1080
+      ],
+      "dpr": 1,
+      "render_resolution": [
+        1920,
+        1080
+      ],
+      "wall_seconds": 5.00689169999896,
+      "frames": 581,
+      "raf_fps": 116.19767604647906,
+      "raf_p95_ms": 13.900000000001455,
+      "raf_max_ms": 20.899999999999636,
+      "frames_over50ms": 0,
+      "gpu_supported": true,
+      "gpu_samples": 58,
+      "gpu_median_ms": 6.833664000000001,
+      "gpu_p95_ms": 8.639488,
+      "gpu_max_ms": 10.326016,
+      "cpu_submit_p95_ms": 6.600000001490116,
+      "state": {
+        "t": 136.33140000000037,
+        "location": "street",
+        "playing": true,
+        "free": false,
+        "speed": 1,
+        "shot": 12,
+        "position": [
+          0.19247294873966303,
+          3.863694123549218,
+          69.50432926910118
+        ],
+        "target": [
+          -1,
+          5,
+          -15.418850279630004
+        ],
+        "fov": 50,
+        "damageCount": 46,
+        "visibleFragments": 1120,
+        "shaderErrors": [],
+        "drawCalls": 979,
+        "triangles": 2147667,
+        "memory": {
+          "geometries": 320,
+          "textures": 42
+        },
+        "programs": 75
+      }
+    }
+  ],
+  "errors": [],
+  "browser": "152.0.7977.77",
+  "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3050 Ti Laptop GPU (0x000025A0) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "minimum_measured_fps": 79.71899055828202
+}

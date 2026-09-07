@@ -1,0 +1,5 @@
+
+# Large generated offline artifacts: preserve bytes and avoid dumping embedded images
+index.html -text -diff
+assets/recipe.json -text -diff
+vendor/app.bundle.js -text -diff

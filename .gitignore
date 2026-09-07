@@ -15,3 +15,19 @@ Thumbs.db
 .DS_Store
 *.tmp
 *.bak
+
+# v2 packages and bytecode
+/B52_Hanoi_1972_v2_Project.zip
+/B52_Hanoi_1972_v2_Viewer.zip
+**/__pycache__/
+*.pyc
+# Private inspection copies: rights not cleared for release; source URLs are retained
+/references/v2/*.html
+/references/v2/drawing_large.png
+/references/v2/historical2_large.jpg
+/references/v2/bridge_historic.jpg
+/references/v2/b52_top.jpg
+
+# Generated v2 release metadata; included inside the release ZIP
+/RELEASE_V2.json
+/MANIFEST_V2_SHA256.json

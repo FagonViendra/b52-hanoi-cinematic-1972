@@ -1,0 +1,496 @@
+{
+  "tests": [
+    {
+      "name": "Offline initialization, no external requests",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Seven chapters and 19 shots",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Reverse seek restores intact geometry and pixels",
+      "pass": true,
+      "detail": {
+        "destroyed_at_148": 46,
+        "same_pixels": true
+      }
+    },
+    {
+      "name": "Lake restored within 1-level and 0.001% pixel tolerance",
+      "pass": true,
+      "detail": {
+        "changed_pixels": 0,
+        "max_channel_delta": 0,
+        "pixel_fraction": 0.0,
+        "reason": "Strict RGB comparison found seven one-level 8-bit differences; actual images and amplified diff inspected. Geometry changes or broad image drift must still fail."
+      }
+    },
+    {
+      "name": "Pause does not advance time",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Forward five seconds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Back five seconds",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Timeline seek",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Playback speed 0.25",
+      "pass": true,
+      "detail": {
+        "elapsed": 1.112692100001368,
+        "delta": 0.2773250000001859
+      }
+    },
+    {
+      "name": "Playback speed 4",
+      "pass": true,
+      "detail": {
+        "elapsed": 1.1211530999989918,
+        "delta": 4.474799999997021
+      }
+    },
+    {
+      "name": "Single-frame advance",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Single-frame reverse",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Free-view enters paused",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "WASD moves free camera",
+      "pass": true,
+      "detail": {
+        "distance": 7.444799999999986
+      }
+    },
+    {
+      "name": "Orbit drag moves camera",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Film camera restored",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Hide interface",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Restore interface",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Archive opens",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Reference images embedded and decoded",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Reduced-flash option",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Audio starts only after gesture",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Audio can mute",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "PNG capture download",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Camera JSON download",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Quality low renders",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Quality high renders",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Quality balanced renders",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "No geometry/texture growth after warm-up and 70 scene seeks",
+      "pass": true,
+      "detail": {
+        "before": {
+          "geometries": 323,
+          "textures": 44
+        },
+        "after": {
+          "geometries": 323,
+          "textures": 44
+        }
+      }
+    },
+    {
+      "name": "Finite camera after stress seek",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Negative seek clamps",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Overrun seek clamps",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Replay restarts from end",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Mobile landscape playback control visible",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Mobile landscape no horizontal overflow",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Mobile portrait playback control visible",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Mobile portrait no horizontal overflow",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "No JavaScript or shader errors",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "No external runtime fetches",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Per-chapter historical dossier opens",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Bach Mai history contains sourced hour and year",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "History links are explicit HTTPS sources",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Narration changes between shots within one chapter",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Persistent 3D fragments at 125",
+      "pass": true,
+      "detail": {
+        "actual": 0,
+        "expected": 0
+      }
+    },
+    {
+      "name": "Persistent 3D fragments at 126.6",
+      "pass": true,
+      "detail": {
+        "actual": 280,
+        "expected": 280
+      }
+    },
+    {
+      "name": "Persistent 3D fragments at 133",
+      "pass": true,
+      "detail": {
+        "actual": 1120,
+        "expected": 1120
+      }
+    },
+    {
+      "name": "Persistent 3D fragments at 193",
+      "pass": true,
+      "detail": {
+        "actual": 1120,
+        "expected": 1120
+      }
+    },
+    {
+      "name": "No stale aircraft color buffer after scene change",
+      "pass": true,
+      "detail": {
+        "max_channel_delta": 0
+      }
+    },
+    {
+      "name": "Land image has geometry, not a blank pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Bridge main node graph has no dangling members",
+      "pass": true,
+      "detail": {
+        "representation": "Two 75 m anchor spans, 27.5 m arms, one 51.2 m suspended section, connected end approaches; not the entire bridge in December 1972",
+        "length_m": 370,
+        "shared_nodes": 196,
+        "main_members": 527,
+        "dangling_main_endpoints": [],
+        "span_join_gap_m": 0,
+        "deck_elevation_m": 7.4,
+        "truss_spacing_m": 4.75
+      }
+    },
+    {
+      "name": "Dense Khâm Thiên context exceeds 900 houses",
+      "pass": true,
+      "detail": {
+        "bridge": 1542,
+        "port": 24,
+        "street": 1070,
+        "lake": 534
+      }
+    },
+    {
+      "name": "Ordinary house gaps below 8cm",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Every debris run is finite, dissipative and settled",
+      "pass": true,
+      "detail": [
+        {
+          "start": 73.5,
+          "location": "port",
+          "gravity": 9.81,
+          "integrationHz": 120,
+          "samplingHz": 30,
+          "fragmentCount": 280,
+          "floorContacts": 747,
+          "wallContacts": 0,
+          "roofContacts": 0,
+          "floorViolations": 0,
+          "maxContactEnergyRatio": 1,
+          "settledAtEnd": 280
+        },
+        {
+          "start": 98,
+          "location": "hospital",
+          "gravity": 9.81,
+          "integrationHz": 120,
+          "samplingHz": 30,
+          "fragmentCount": 280,
+          "floorContacts": 726,
+          "wallContacts": 0,
+          "roofContacts": 0,
+          "floorViolations": 0,
+          "maxContactEnergyRatio": 1,
+          "settledAtEnd": 280
+        },
+        {
+          "start": 100.5,
+          "location": "hospital",
+          "gravity": 9.81,
+          "integrationHz": 120,
+          "samplingHz": 30,
+          "fragmentCount": 280,
+          "floorContacts": 744,
+          "wallContacts": 0,
+          "roofContacts": 0,
+          "floorViolations": 0,
+          "maxContactEnergyRatio": 1,
+          "settledAtEnd": 280
+        },
+        {
+          "start": 126,
+          "location": "street",
+          "gravity": 9.81,
+          "integrationHz": 120,
+          "samplingHz": 30,
+          "fragmentCount": 280,
+          "floorContacts": 747,
+          "wallContacts": 3,
+          "roofContacts": 3,
+          "floorViolations": 0,
+          "maxContactEnergyRatio": 1,
+          "settledAtEnd": 280
+        },
+        {
+          "start": 127.1,
+          "location": "street",
+          "gravity": 9.81,
+          "integrationHz": 120,
+          "samplingHz": 30,
+          "fragmentCount": 280,
+          "floorContacts": 740,
+          "wallContacts": 5,
+          "roofContacts": 1,
+          "floorViolations": 0,
+          "maxContactEnergyRatio": 1,
+          "settledAtEnd": 280
+        },
+        {
+          "start": 128.4,
+          "location": "street",
+          "gravity": 9.81,
+          "integrationHz": 120,
+          "samplingHz": 30,
+          "fragmentCount": 280,
+          "floorContacts": 699,
+          "wallContacts": 52,
+          "roofContacts": 31,
+          "floorViolations": 0,
+          "maxContactEnergyRatio": 1,
+          "settledAtEnd": 280
+        },
+        {
+          "start": 130,
+          "location": "street",
+          "gravity": 9.81,
+          "integrationHz": 120,
+          "samplingHz": 30,
+          "fragmentCount": 280,
+          "floorContacts": 700,
+          "wallContacts": 64,
+          "roofContacts": 31,
+          "floorViolations": 0,
+          "maxContactEnergyRatio": 1,
+          "settledAtEnd": 280
+        }
+      ]
+    },
+    {
+      "name": "Actual street debris contacts buildings",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Structural collapse has 644 authored pieces",
+      "pass": true,
+      "detail": {
+        "houses": 46,
+        "structuralPieces": 644,
+        "settledAtEnd": 644,
+        "groundViolations": 0
+      }
+    },
+    {
+      "name": "Every roof-wall-timber piece settles without floor violation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "Roof-wall collapse is reversible at identical time",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "No late JavaScript or shader errors",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "errors": [],
+  "network": [],
+  "build_sha256": "f64699ad5909280194b247728a0f3380a902b88dd0b2f99b71646b25c92e9f33",
+  "warmup_memory": {
+    "cold": {
+      "geometries": 319,
+      "textures": 44
+    },
+    "warm": {
+      "geometries": 323,
+      "textures": 44
+    }
+  },
+  "final_state": {
+    "t": 118,
+    "location": "street",
+    "playing": false,
+    "free": false,
+    "speed": 1,
+    "shot": 10,
+    "position": [
+      0.3,
+      2.9,
+      58
+    ],
+    "target": [
+      0,
+      4,
+      -25.5
+    ],
+    "fov": 50,
+    "damageCount": 0,
+    "visibleFragments": 0,
+    "shaderErrors": [],
+    "drawCalls": 705,
+    "triangles": 1765215,
+    "memory": {
+      "geometries": 323,
+      "textures": 44
+    },
+    "programs": 88
+  },
+  "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3050 Ti Laptop GPU (0x000025A0) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "pass_count": 58,
+  "total": 58
+}

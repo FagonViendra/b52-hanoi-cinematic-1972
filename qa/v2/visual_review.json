@@ -1,0 +1,2306 @@
+{
+  "errors": [],
+  "frames": [
+    {
+      "file": "shot_01_0.png",
+      "t": 0.7,
+      "location": "bridge",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 0,
+      "position": [
+        -134.65579536250286,
+        30.942649732925464,
+        163.68457353109002
+      ],
+      "target": [
+        0.08699999999999998,
+        10,
+        0
+      ],
+      "fov": 46,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 317,
+      "triangles": 1120655,
+      "memory": {
+        "geometries": 314,
+        "textures": 41
+      },
+      "programs": 69
+    },
+    {
+      "file": "shot_01_1.png",
+      "t": 7,
+      "location": "bridge",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 0,
+      "position": [
+        -111.26242621757679,
+        27.044657800907554,
+        142.24561790499158
+      ],
+      "target": [
+        6,
+        10,
+        0
+      ],
+      "fov": 46,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 317,
+      "triangles": 1120655,
+      "memory": {
+        "geometries": 314,
+        "textures": 41
+      },
+      "programs": 69
+    },
+    {
+      "file": "shot_01_2.png",
+      "t": 13.3,
+      "location": "bridge",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 0,
+      "position": [
+        -88.33722056107327,
+        23.05866517487925,
+        120.32265846183586
+      ],
+      "target": [
+        11.913,
+        10,
+        0
+      ],
+      "fov": 46,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 317,
+      "triangles": 1120655,
+      "memory": {
+        "geometries": 314,
+        "textures": 41
+      },
+      "programs": 69
+    },
+    {
+      "file": "shot_02_0.png",
+      "t": 14.7,
+      "location": "bridge",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 1,
+      "position": [
+        117.45180695345559,
+        11.979567041223547,
+        22.938854830941843
+      ],
+      "target": [
+        19.558489583333333,
+        11,
+        0
+      ],
+      "fov": 43,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 317,
+      "triangles": 1120655,
+      "memory": {
+        "geometries": 314,
+        "textures": 41
+      },
+      "programs": 69
+    },
+    {
+      "file": "shot_02_1.png",
+      "t": 20,
+      "location": "bridge",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 1,
+      "position": [
+        90.06043608999744,
+        10.976864243702572,
+        19.916751039240815
+      ],
+      "target": [
+        -2.5,
+        11,
+        0
+      ],
+      "fov": 43,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 315,
+      "triangles": 1120175,
+      "memory": {
+        "geometries": 314,
+        "textures": 41
+      },
+      "programs": 69
+    },
+    {
+      "file": "shot_02_2.png",
+      "t": 25.3,
+      "location": "bridge",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 1,
+      "position": [
+        62.55062121441136,
+        10.607478168382091,
+        18.037762446600997
+      ],
+      "target": [
+        -24.558489583333333,
+        11,
+        0
+      ],
+      "fov": 43,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 295,
+      "triangles": 1104935,
+      "memory": {
+        "geometries": 314,
+        "textures": 41
+      },
+      "programs": 69
+    },
+    {
+      "file": "shot_03_0.png",
+      "t": 26.7,
+      "location": "air",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 2,
+      "position": [
+        72.80670829668175,
+        117.89440436271651,
+        -79.82424750988869
+      ],
+      "target": [
+        0,
+        93,
+        -0.009811342592592571
+      ],
+      "fov": 43,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 24,
+      "triangles": 63928,
+      "memory": {
+        "geometries": 314,
+        "textures": 41
+      },
+      "programs": 73
+    },
+    {
+      "file": "shot_03_1.png",
+      "t": 32,
+      "location": "air",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 2,
+      "position": [
+        63.162503638753606,
+        112.58717962500745,
+        -71.04743883600436
+      ],
+      "target": [
+        0,
+        93,
+        -0.5
+      ],
+      "fov": 43,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 24,
+      "triangles": 63928,
+      "memory": {
+        "geometries": 314,
+        "textures": 41
+      },
+      "programs": 73
+    },
+    {
+      "file": "shot_03_2.png",
+      "t": 37.3,
+      "location": "air",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 2,
+      "position": [
+        53.19995829731879,
+        108.08864533238263,
+        -62.17769570433156
+      ],
+      "target": [
+        0,
+        93,
+        -0.9901886574074072
+      ],
+      "fov": 43,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 24,
+      "triangles": 63928,
+      "memory": {
+        "geometries": 314,
+        "textures": 41
+      },
+      "programs": 73
+    },
+    {
+      "file": "shot_04_0.png",
+      "t": 38.7,
+      "location": "air",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 3,
+      "position": [
+        -26.815257304641783,
+        102.88797281089349,
+        -44.740853838544965
+      ],
+      "target": [
+        0,
+        94,
+        -14.0432578125
+      ],
+      "fov": 43,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 24,
+      "triangles": 63928,
+      "memory": {
+        "geometries": 314,
+        "textures": 41
+      },
+      "programs": 73
+    },
+    {
+      "file": "shot_04_1.png",
+      "t": 42,
+      "location": "air",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 3,
+      "position": [
+        -22.75597020416142,
+        100.35422105860229,
+        -39.015774972728316
+      ],
+      "target": [
+        0,
+        94,
+        -15
+      ],
+      "fov": 43,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 24,
+      "triangles": 63928,
+      "memory": {
+        "geometries": 314,
+        "textures": 41
+      },
+      "programs": 73
+    },
+    {
+      "file": "shot_04_2.png",
+      "t": 45.3,
+      "location": "air",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 3,
+      "position": [
+        -18.20878028782232,
+        99.05044716924507,
+        -33.26022625861626
+      ],
+      "target": [
+        0,
+        94,
+        -15.9567421875
+      ],
+      "fov": 43,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 24,
+      "triangles": 63928,
+      "memory": {
+        "geometries": 314,
+        "textures": 41
+      },
+      "programs": 73
+    },
+    {
+      "file": "shot_05_0.png",
+      "t": 46.7,
+      "location": "air",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 4,
+      "position": [
+        41.90188657407408,
+        57.94113194444444,
+        47.823395833333336
+      ],
+      "target": [
+        0,
+        84.97056597222222,
+        0.9901886574074074
+      ],
+      "fov": 57,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 19,
+      "triangles": 32962,
+      "memory": {
+        "geometries": 315,
+        "textures": 41
+      },
+      "programs": 74
+    },
+    {
+      "file": "shot_05_1.png",
+      "t": 52,
+      "location": "air",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 4,
+      "position": [
+        37.00000000000001,
+        55,
+        39.00000000000001
+      ],
+      "target": [
+        0,
+        83.5,
+        0.5
+      ],
+      "fov": 57,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 25,
+      "triangles": 34066,
+      "memory": {
+        "geometries": 315,
+        "textures": 41
+      },
+      "programs": 74
+    },
+    {
+      "file": "shot_05_2.png",
+      "t": 57.3,
+      "location": "air",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 4,
+      "position": [
+        32.09811342592592,
+        52.05886805555556,
+        30.176604166666664
+      ],
+      "target": [
+        0,
+        82.02943402777778,
+        0.009811342592592753
+      ],
+      "fov": 57,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 17,
+      "triangles": 32594,
+      "memory": {
+        "geometries": 315,
+        "textures": 41
+      },
+      "programs": 74
+    },
+    {
+      "file": "shot_06_0.png",
+      "t": 58.7,
+      "location": "port",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 5,
+      "position": [
+        82.79289530140443,
+        25.94333173016873,
+        109.62307566212492
+      ],
+      "target": [
+        -29.99018865740741,
+        7,
+        -17.127547453703706
+      ],
+      "fov": 47,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 477,
+      "triangles": 466591,
+      "memory": {
+        "geometries": 315,
+        "textures": 41
+      },
+      "programs": 77
+    },
+    {
+      "file": "shot_06_1.png",
+      "t": 64,
+      "location": "port",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 5,
+      "position": [
+        72.45528098327175,
+        23.104295721193168,
+        90.78803996655037
+      ],
+      "target": [
+        -29.5,
+        7,
+        -23.5
+      ],
+      "fov": 47,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 477,
+      "triangles": 466591,
+      "memory": {
+        "geometries": 315,
+        "textures": 41
+      },
+      "programs": 77
+    },
+    {
+      "file": "shot_06_2.png",
+      "t": 69.3,
+      "location": "port",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 5,
+      "position": [
+        61.22537415898045,
+        21.04078412077156,
+        72.3684080802455
+      ],
+      "target": [
+        -29.00981134259259,
+        7,
+        -29.872452546296294
+      ],
+      "fov": 47,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 477,
+      "triangles": 466591,
+      "memory": {
+        "geometries": 315,
+        "textures": 41
+      },
+      "programs": 77
+    },
+    {
+      "file": "shot_07_0.png",
+      "t": 70.7,
+      "location": "port",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 6,
+      "position": [
+        38.90485342949684,
+        7,
+        67.62071387991337
+      ],
+      "target": [
+        -29.02943402777778,
+        7.0098113425925925,
+        -48.09811342592592
+      ],
+      "fov": 48,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 477,
+      "triangles": 466591,
+      "memory": {
+        "geometries": 315,
+        "textures": 41
+      },
+      "programs": 77
+    },
+    {
+      "file": "shot_07_1.png",
+      "t": 76,
+      "location": "port",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 6,
+      "position": [
+        34.1396650784055,
+        7,
+        48.67579246245361
+      ],
+      "target": [
+        -30.5,
+        7.5,
+        -53
+      ],
+      "fov": 48,
+      "damageCount": 46,
+      "visibleFragments": 280,
+      "shaderErrors": [],
+      "drawCalls": 501,
+      "triangles": 481723,
+      "memory": {
+        "geometries": 319,
+        "textures": 42
+      },
+      "programs": 83
+    },
+    {
+      "file": "shot_07_2.png",
+      "t": 81.3,
+      "location": "port",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 6,
+      "position": [
+        31.06064240101589,
+        7,
+        29.386311750885813
+      ],
+      "target": [
+        -31.97056597222222,
+        7.9901886574074075,
+        -57.90188657407407
+      ],
+      "fov": 48,
+      "damageCount": 46,
+      "visibleFragments": 280,
+      "shaderErrors": [],
+      "drawCalls": 499,
+      "triangles": 481555,
+      "memory": {
+        "geometries": 319,
+        "textures": 42
+      },
+      "programs": 83
+    },
+    {
+      "file": "shot_08_0.png",
+      "t": 82.7,
+      "location": "hospital",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 7,
+      "position": [
+        12.901967385123188,
+        5.688198351593463,
+        47.88236086214783
+      ],
+      "target": [
+        0,
+        5.100981134259259,
+        0
+      ],
+      "fov": 47,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 121,
+      "triangles": 86879,
+      "memory": {
+        "geometries": 319,
+        "textures": 42
+      },
+      "programs": 85
+    },
+    {
+      "file": "shot_08_1.png",
+      "t": 88,
+      "location": "hospital",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 7,
+      "position": [
+        8.00408127704223,
+        5.100408194282243,
+        42.00489753245068
+      ],
+      "target": [
+        0,
+        5.15,
+        0
+      ],
+      "fov": 47,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 121,
+      "triangles": 86879,
+      "memory": {
+        "geometries": 319,
+        "textures": 42
+      },
+      "programs": 85
+    },
+    {
+      "file": "shot_08_2.png",
+      "t": 93.3,
+      "location": "hospital",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 7,
+      "position": [
+        3.098195870031543,
+        4.707817904219357,
+        36.11783504403785
+      ],
+      "target": [
+        0,
+        5.199018865740741,
+        0
+      ],
+      "fov": 47,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 119,
+      "triangles": 86855,
+      "memory": {
+        "geometries": 319,
+        "textures": 42
+      },
+      "programs": 85
+    },
+    {
+      "file": "shot_09_0.png",
+      "t": 94.7,
+      "location": "hospital",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 8,
+      "position": [
+        -25.89725379515801,
+        6.172372805603305,
+        36.86300506021068
+      ],
+      "target": [
+        14.10324279835391,
+        5.017207133058985,
+        -4.017207133058985
+      ],
+      "fov": 47,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 121,
+      "triangles": 86879,
+      "memory": {
+        "geometries": 319,
+        "textures": 42
+      },
+      "programs": 85
+    },
+    {
+      "file": "shot_09_1.png",
+      "t": 98.5,
+      "location": "hospital",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 8,
+      "position": [
+        -23.022862477200547,
+        5.4097701738707045,
+        33.01891226962207
+      ],
+      "target": [
+        17,
+        5.5,
+        -4.5
+      ],
+      "fov": 47,
+      "damageCount": 46,
+      "visibleFragments": 280,
+      "shaderErrors": [],
+      "drawCalls": 219,
+      "triangles": 104163,
+      "memory": {
+        "geometries": 320,
+        "textures": 42
+      },
+      "programs": 85
+    },
+    {
+      "file": "shot_09_2.png",
+      "t": 102.3,
+      "location": "hospital",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 8,
+      "position": [
+        -20.103799603281896,
+        5.013655948809029,
+        29.138339299084894
+      ],
+      "target": [
+        19.89675720164609,
+        5.982792866941015,
+        -4.982792866941015
+      ],
+      "fov": 47,
+      "damageCount": 46,
+      "visibleFragments": 560,
+      "shaderErrors": [],
+      "drawCalls": 237,
+      "triangles": 119075,
+      "memory": {
+        "geometries": 320,
+        "textures": 42
+      },
+      "programs": 85
+    },
+    {
+      "file": "shot_10_0.png",
+      "t": 103.7,
+      "location": "hospital",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 9,
+      "position": [
+        51.84871652974025,
+        28.113914585824624,
+        50.84871652974025
+      ],
+      "target": [
+        4.017207133058985,
+        3,
+        -7.03441426611797
+      ],
+      "fov": 47,
+      "damageCount": 46,
+      "visibleFragments": 560,
+      "shaderErrors": [],
+      "drawCalls": 239,
+      "triangles": 119079,
+      "memory": {
+        "geometries": 321,
+        "textures": 43
+      },
+      "programs": 85
+    },
+    {
+      "file": "shot_10_1.png",
+      "t": 107.5,
+      "location": "hospital",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 9,
+      "position": [
+        47.59061377864541,
+        31.27043939362776,
+        46.59061377864541
+      ],
+      "target": [
+        4.5,
+        3,
+        -8
+      ],
+      "fov": 47,
+      "damageCount": 46,
+      "visibleFragments": 560,
+      "shaderErrors": [],
+      "drawCalls": 237,
+      "triangles": 118911,
+      "memory": {
+        "geometries": 321,
+        "textures": 43
+      },
+      "programs": 85
+    },
+    {
+      "file": "shot_10_2.png",
+      "t": 111.3,
+      "location": "hospital",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 9,
+      "position": [
+        43.157856910687535,
+        33.90561615975497,
+        42.157856910687535
+      ],
+      "target": [
+        4.982792866941015,
+        3,
+        -8.96558573388203
+      ],
+      "fov": 47,
+      "damageCount": 46,
+      "visibleFragments": 560,
+      "shaderErrors": [],
+      "drawCalls": 237,
+      "triangles": 118911,
+      "memory": {
+        "geometries": 321,
+        "textures": 43
+      },
+      "programs": 85
+    },
+    {
+      "file": "shot_11_0.png",
+      "t": 112.7,
+      "location": "street",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 10,
+      "position": [
+        0.005905694162091115,
+        2.7039056714566008,
+        67.80377268762616
+      ],
+      "target": [
+        0,
+        4,
+        -20.10792476851852
+      ],
+      "fov": 50,
+      "damageCount": 0,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 705,
+      "triangles": 1765215,
+      "memory": {
+        "geometries": 324,
+        "textures": 46
+      },
+      "programs": 86
+    },
+    {
+      "file": "shot_11_1.png",
+      "t": 118,
+      "location": "street",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 10,
+      "position": [
+        0.3,
+        2.9,
+        58
+      ],
+      "target": [
+        0,
+        4,
+        -25.5
+      ],
+      "fov": 50,
+      "damageCount": 0,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 705,
+      "triangles": 1765215,
+      "memory": {
+        "geometries": 324,
+        "textures": 46
+      },
+      "programs": 86
+    },
+    {
+      "file": "shot_11_2.png",
+      "t": 123.3,
+      "location": "street",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 10,
+      "position": [
+        0.49609432854339963,
+        3.1940943058379103,
+        48.196227312373836
+      ],
+      "target": [
+        0,
+        4,
+        -30.892075231481478
+      ],
+      "fov": 50,
+      "damageCount": 0,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 705,
+      "triangles": 1765215,
+      "memory": {
+        "geometries": 324,
+        "textures": 46
+      },
+      "programs": 86
+    },
+    {
+      "file": "shot_12_0.png",
+      "t": 124.7,
+      "location": "street",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 11,
+      "position": [
+        19.885167359869932,
+        15.924012291243518,
+        13.84717350549169
+      ],
+      "target": [
+        -7.02162890625,
+        4.02162890625,
+        -16.043257812500002
+      ],
+      "fov": 53,
+      "damageCount": 0,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 693,
+      "triangles": 1764439,
+      "memory": {
+        "geometries": 324,
+        "textures": 46
+      },
+      "programs": 86
+    },
+    {
+      "file": "shot_12_1.png",
+      "t": 128,
+      "location": "street",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 11,
+      "position": [
+        17.332512723750153,
+        14.260548598553848,
+        10.466107244894761
+      ],
+      "target": [
+        -7.5,
+        4.5,
+        -17
+      ],
+      "fov": 53,
+      "damageCount": 21,
+      "visibleFragments": 560,
+      "shaderErrors": [],
+      "drawCalls": 933,
+      "triangles": 2117355,
+      "memory": {
+        "geometries": 327,
+        "textures": 46
+      },
+      "programs": 86
+    },
+    {
+      "file": "shot_12_2.png",
+      "t": 131.3,
+      "location": "street",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 11,
+      "position": [
+        15.099221623485985,
+        12.09999725015306,
+        7.1495645946180595
+      ],
+      "target": [
+        -7.978371093750001,
+        4.978371093750001,
+        -17.9567421875
+      ],
+      "fov": 53,
+      "damageCount": 46,
+      "visibleFragments": 1120,
+      "shaderErrors": [],
+      "drawCalls": 973,
+      "triangles": 2147231,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 86
+    },
+    {
+      "file": "shot_13_0.png",
+      "t": 132.7,
+      "location": "street",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 12,
+      "position": [
+        0.006623050822626167,
+        3.995558819592682,
+        75.77897350732346
+      ],
+      "target": [
+        -1,
+        5,
+        -12.116333583771597
+      ],
+      "fov": 50,
+      "damageCount": 46,
+      "visibleFragments": 1120,
+      "shaderErrors": [],
+      "drawCalls": 981,
+      "triangles": 2147835,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 86
+    },
+    {
+      "file": "shot_13_1.png",
+      "t": 137.5,
+      "location": "street",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 12,
+      "position": [
+        0.2842469919828305,
+        3.8080074641813035,
+        66.50015485560424
+      ],
+      "target": [
+        -1,
+        5,
+        -17
+      ],
+      "fov": 50,
+      "damageCount": 46,
+      "visibleFragments": 1120,
+      "shaderErrors": [],
+      "drawCalls": 979,
+      "triangles": 2147667,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 86
+    },
+    {
+      "file": "shot_13_2.png",
+      "t": 142.3,
+      "location": "street",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 12,
+      "position": [
+        0.5926228190057129,
+        3.702431851982466,
+        57.221043346338966
+      ],
+      "target": [
+        -1,
+        5,
+        -21.883666416228404
+      ],
+      "fov": 50,
+      "damageCount": 46,
+      "visibleFragments": 1120,
+      "shaderErrors": [],
+      "drawCalls": 979,
+      "triangles": 2147667,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 86
+    },
+    {
+      "file": "shot_14_0.png",
+      "t": 143.7,
+      "location": "street",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 13,
+      "position": [
+        -39.83878833383115,
+        25.954277560882616,
+        39.74708053798349
+      ],
+      "target": [
+        0,
+        3,
+        -7.116333583771596
+      ],
+      "fov": 51,
+      "damageCount": 46,
+      "visibleFragments": 1120,
+      "shaderErrors": [],
+      "drawCalls": 979,
+      "triangles": 2147667,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 86
+    },
+    {
+      "file": "shot_14_1.png",
+      "t": 148.5,
+      "location": "street",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 13,
+      "position": [
+        -33.07664869123747,
+        24.029385152337582,
+        29.129596919925064
+      ],
+      "target": [
+        0,
+        3,
+        -12
+      ],
+      "fov": 51,
+      "damageCount": 46,
+      "visibleFragments": 1120,
+      "shaderErrors": [],
+      "drawCalls": 971,
+      "triangles": 2146899,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 86
+    },
+    {
+      "file": "shot_14_2.png",
+      "t": 153.3,
+      "location": "street",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 13,
+      "position": [
+        -27.141051844690537,
+        21.07092496004923,
+        18.259082761348598
+      ],
+      "target": [
+        0,
+        3,
+        -16.883666416228404
+      ],
+      "fov": 51,
+      "damageCount": 46,
+      "visibleFragments": 1120,
+      "shaderErrors": [],
+      "drawCalls": 969,
+      "triangles": 2146895,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 86
+    },
+    {
+      "file": "shot_15_0.png",
+      "t": 154.7,
+      "location": "lake",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 14,
+      "position": [
+        38.92371709643993,
+        18.954272880965657,
+        34.9387818731943
+      ],
+      "target": [
+        -0.007249999999999769,
+        2,
+        0.007249999999999769
+      ],
+      "fov": 47,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 739,
+      "triangles": 974203,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    },
+    {
+      "file": "shot_15_1.png",
+      "t": 161,
+      "location": "lake",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 14,
+      "position": [
+        33.72471439617832,
+        15.824385643205048,
+        30.82676499220142
+      ],
+      "target": [
+        -0.5,
+        2,
+        0.5
+      ],
+      "fov": 47,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 739,
+      "triangles": 974203,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    },
+    {
+      "file": "shot_15_2.png",
+      "t": 167.3,
+      "location": "lake",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 14,
+      "position": [
+        28.082970461406475,
+        12.055347435666464,
+        28.041333154423583
+      ],
+      "target": [
+        -0.9927500000000002,
+        2,
+        0.9927500000000002
+      ],
+      "fov": 47,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 738,
+      "triangles": 974191,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    },
+    {
+      "file": "shot_16_0.png",
+      "t": 168.7,
+      "location": "lake",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 15,
+      "position": [
+        11.894977982542951,
+        4.785892482153401,
+        14.03535594643788
+      ],
+      "target": [
+        -1,
+        1.8,
+        1
+      ],
+      "fov": 47,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 721,
+      "triangles": 967759,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    },
+    {
+      "file": "shot_16_1.png",
+      "t": 175,
+      "location": "lake",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 15,
+      "position": [
+        4.695829803586109,
+        3.913230718657864,
+        16.14432313820558
+      ],
+      "target": [
+        -1,
+        1.8,
+        1
+      ],
+      "fov": 47,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 721,
+      "triangles": 967759,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    },
+    {
+      "file": "shot_16_2.png",
+      "t": 181.3,
+      "location": "lake",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 15,
+      "position": [
+        -2.8883758341766645,
+        3.703662133553564,
+        16.000195573246273
+      ],
+      "target": [
+        -1,
+        1.8,
+        1
+      ],
+      "fov": 47,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 724,
+      "triangles": 967795,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    },
+    {
+      "file": "shot_17_0.png",
+      "t": 182.7,
+      "location": "after",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 16,
+      "position": [
+        0.9607546296296313,
+        13.960754629629632,
+        69.80377314814815
+      ],
+      "target": [
+        0,
+        2,
+        -15.068679398148147
+      ],
+      "fov": 49,
+      "damageCount": 46,
+      "visibleFragments": 1120,
+      "shaderErrors": [],
+      "drawCalls": 979,
+      "triangles": 2147667,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    },
+    {
+      "file": "shot_17_1.png",
+      "t": 188,
+      "location": "after",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 16,
+      "position": [
+        -1.0000000000000027,
+        11.999999999999996,
+        59.999999999999986
+      ],
+      "target": [
+        0,
+        2,
+        -18.5
+      ],
+      "fov": 49,
+      "damageCount": 46,
+      "visibleFragments": 1120,
+      "shaderErrors": [],
+      "drawCalls": 979,
+      "triangles": 2147667,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    },
+    {
+      "file": "shot_17_2.png",
+      "t": 193.3,
+      "location": "after",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 16,
+      "position": [
+        -2.960754629629631,
+        10.039245370370368,
+        50.19622685185185
+      ],
+      "target": [
+        0,
+        2,
+        -21.931320601851855
+      ],
+      "fov": 49,
+      "damageCount": 46,
+      "visibleFragments": 1120,
+      "shaderErrors": [],
+      "drawCalls": 979,
+      "triangles": 2147667,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    },
+    {
+      "file": "shot_18_0.png",
+      "t": 194.7,
+      "location": "after",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 17,
+      "position": [
+        3.7803610836533528,
+        2.291577875137719,
+        32.86026666889568
+      ],
+      "target": [
+        -9.014014,
+        1,
+        20.929930000000002
+      ],
+      "fov": 46,
+      "damageCount": 46,
+      "visibleFragments": 1120,
+      "shaderErrors": [],
+      "drawCalls": 967,
+      "triangles": 2146891,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    },
+    {
+      "file": "shot_18_1.png",
+      "t": 199,
+      "location": "after",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 17,
+      "position": [
+        3.1017114429436603,
+        2.000713168786967,
+        28.014255268486284
+      ],
+      "target": [
+        -9.5,
+        1,
+        18.5
+      ],
+      "fov": 46,
+      "damageCount": 46,
+      "visibleFragments": 1120,
+      "shaderErrors": [],
+      "drawCalls": 945,
+      "triangles": 2144731,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    },
+    {
+      "file": "shot_18_2.png",
+      "t": 203.3,
+      "location": "after",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 17,
+      "position": [
+        2.6139789559586046,
+        1.8055839356844168,
+        23.1405542294886
+      ],
+      "target": [
+        -9.985986,
+        1,
+        16.070069999999998
+      ],
+      "fov": 46,
+      "damageCount": 46,
+      "visibleFragments": 1120,
+      "shaderErrors": [],
+      "drawCalls": 937,
+      "triangles": 2144135,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    },
+    {
+      "file": "shot_19_0.png",
+      "t": 204.7,
+      "location": "after",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 18,
+      "position": [
+        35.16582472387947,
+        33.24598556149845,
+        68.16582472387948
+      ],
+      "target": [
+        0,
+        2,
+        -20.150629629629623
+      ],
+      "fov": 49,
+      "damageCount": 46,
+      "visibleFragments": 1120,
+      "shaderErrors": [],
+      "drawCalls": 963,
+      "triangles": 2146067,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    },
+    {
+      "file": "shot_19_1.png",
+      "t": 207,
+      "location": "after",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 18,
+      "position": [
+        37.17124994657822,
+        36.30307016934299,
+        70.17124994657823
+      ],
+      "target": [
+        0,
+        2,
+        -22
+      ],
+      "fov": 49,
+      "damageCount": 46,
+      "visibleFragments": 1120,
+      "shaderErrors": [],
+      "drawCalls": 963,
+      "triangles": 2146067,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    },
+    {
+      "file": "shot_19_2.png",
+      "t": 209.3,
+      "location": "after",
+      "playing": false,
+      "free": false,
+      "speed": 1,
+      "shot": 18,
+      "position": [
+        38.862099110502854,
+        39.72166713679477,
+        71.86209911050284
+      ],
+      "target": [
+        0,
+        2,
+        -23.849370370370377
+      ],
+      "fov": 49,
+      "damageCount": 46,
+      "visibleFragments": 1120,
+      "shaderErrors": [],
+      "drawCalls": 963,
+      "triangles": 2146067,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    }
+  ],
+  "free_views": [
+    {
+      "name": "bridge_bearing_web",
+      "t": 20,
+      "location": "bridge",
+      "playing": false,
+      "free": true,
+      "speed": 1,
+      "shot": 1,
+      "position": [
+        -48,
+        11.000000000000002,
+        10
+      ],
+      "target": [
+        -53.1,
+        7.7,
+        2.37
+      ],
+      "fov": 45,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 295,
+      "triangles": 1104935,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    },
+    {
+      "name": "bridge_under_web",
+      "t": 20,
+      "location": "bridge",
+      "playing": false,
+      "free": true,
+      "speed": 1,
+      "shot": 1,
+      "position": [
+        -43,
+        3.4999999999999996,
+        12.00000000000001
+      ],
+      "target": [
+        -53.1,
+        7,
+        0
+      ],
+      "fov": 48,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 295,
+      "triangles": 1104935,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    },
+    {
+      "name": "bridge_suspended_web",
+      "t": 20,
+      "location": "bridge",
+      "playing": false,
+      "free": true,
+      "speed": 1,
+      "shot": 1,
+      "position": [
+        -19,
+        11,
+        9
+      ],
+      "target": [
+        -25.6,
+        11.4,
+        2.37
+      ],
+      "fov": 45,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 295,
+      "triangles": 1104935,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    },
+    {
+      "name": "aircraft_front_web",
+      "t": 31,
+      "location": "air",
+      "playing": false,
+      "free": true,
+      "speed": 1,
+      "shot": 2,
+      "position": [
+        1.2246467991473532e-14,
+        99,
+        -100
+      ],
+      "target": [
+        0,
+        94,
+        0
+      ],
+      "fov": 39,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 31,
+      "triangles": 95262,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    },
+    {
+      "name": "aircraft_top_web",
+      "t": 31,
+      "location": "air",
+      "playing": false,
+      "free": true,
+      "speed": 1,
+      "shot": 2,
+      "position": [
+        0,
+        181.99999999995498,
+        9.000400043728576e-05
+      ],
+      "target": [
+        0,
+        92,
+        0
+      ],
+      "fov": 46,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 17,
+      "triangles": 32594,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    },
+    {
+      "name": "aircraft_side_web",
+      "t": 31,
+      "location": "air",
+      "playing": false,
+      "free": true,
+      "speed": 1,
+      "shot": 2,
+      "position": [
+        88,
+        96,
+        5.3884459162483544e-15
+      ],
+      "target": [
+        0,
+        94,
+        0
+      ],
+      "fov": 41,
+      "damageCount": 46,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 17,
+      "triangles": 32594,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 87
+    },
+    {
+      "name": "debris_00.png",
+      "t": 125.9,
+      "location": "street",
+      "playing": false,
+      "free": true,
+      "speed": 1,
+      "shot": 11,
+      "position": [
+        8.000000000000004,
+        12.000000000000002,
+        11.000000000000007
+      ],
+      "target": [
+        -9,
+        3.4999999999999996,
+        -23
+      ],
+      "fov": 53,
+      "damageCount": 0,
+      "visibleFragments": 0,
+      "shaderErrors": [],
+      "drawCalls": 693,
+      "triangles": 1764439,
+      "memory": {
+        "geometries": 328,
+        "textures": 46
+      },
+      "programs": 88
+    },
+    {
+      "name": "debris_01.png",
+      "t": 126.08,
+      "location": "street",
+      "playing": false,
+      "free": true,
+      "speed": 1,
+      "shot": 11,
+      "position": [
+        8.000000000000004,
+        12.000000000000002,
+        11.000000000000007
+      ],
+      "target": [
+        -9,
+        3.4999999999999996,
+        -23
+      ],
+      "fov": 53,
+      "damageCount": 0,
+      "visibleFragments": 123,
+      "shaderErrors": [],
+      "drawCalls": 719,
+      "triangles": 1779619,
+      "memory": {
+        "geometries": 329,
+        "textures": 46
+      },
+      "programs": 88
+    },
+    {
+      "name": "debris_02.png",
+      "t": 126.25,
+      "location": "street",
+      "playing": false,
+      "free": true,
+      "speed": 1,
+      "shot": 11,
+      "position": [
+        8.000000000000004,
+        12.000000000000002,
+        11.000000000000007
+      ],
+      "target": [
+        -9,
+        3.4999999999999996,
+        -23
+      ],
+      "fov": 53,
+      "damageCount": 3,
+      "visibleFragments": 280,
+      "shaderErrors": [],
+      "drawCalls": 791,
+      "triangles": 1899563,
+      "memory": {
+        "geometries": 329,
+        "textures": 46
+      },
+      "programs": 88
+    },
+    {
+      "name": "debris_03.png",
+      "t": 126.55,
+      "location": "street",
+      "playing": false,
+      "free": true,
+      "speed": 1,
+      "shot": 11,
+      "position": [
+        8.000000000000004,
+        12.000000000000002,
+        11.000000000000007
+      ],
+      "target": [
+        -9,
+        3.4999999999999996,
+        -23
+      ],
+      "fov": 53,
+      "damageCount": 11,
+      "visibleFragments": 280,
+      "shaderErrors": [],
+      "drawCalls": 911,
+      "triangles": 2102227,
+      "memory": {
+        "geometries": 329,
+        "textures": 46
+      },
+      "programs": 88
+    },
+    {
+      "name": "debris_04.png",
+      "t": 127,
+      "location": "street",
+      "playing": false,
+      "free": true,
+      "speed": 1,
+      "shot": 11,
+      "position": [
+        8.000000000000004,
+        12.000000000000002,
+        11.000000000000007
+      ],
+      "target": [
+        -9,
+        3.4999999999999996,
+        -23
+      ],
+      "fov": 53,
+      "damageCount": 11,
+      "visibleFragments": 280,
+      "shaderErrors": [],
+      "drawCalls": 909,
+      "triangles": 2102223,
+      "memory": {
+        "geometries": 329,
+        "textures": 46
+      },
+      "programs": 88
+    },
+    {
+      "name": "debris_05.png",
+      "t": 128,
+      "location": "street",
+      "playing": false,
+      "free": true,
+      "speed": 1,
+      "shot": 11,
+      "position": [
+        8.000000000000004,
+        12.000000000000002,
+        11.000000000000007
+      ],
+      "target": [
+        -9,
+        3.4999999999999996,
+        -23
+      ],
+      "fov": 53,
+      "damageCount": 21,
+      "visibleFragments": 560,
+      "shaderErrors": [],
+      "drawCalls": 933,
+      "triangles": 2117355,
+      "memory": {
+        "geometries": 329,
+        "textures": 46
+      },
+      "programs": 88
+    },
+    {
+      "name": "debris_06.png",
+      "t": 130.5,
+      "location": "street",
+      "playing": false,
+      "free": true,
+      "speed": 1,
+      "shot": 11,
+      "position": [
+        8.000000000000004,
+        12.000000000000002,
+        11.000000000000007
+      ],
+      "target": [
+        -9,
+        3.4999999999999996,
+        -23
+      ],
+      "fov": 53,
+      "damageCount": 43,
+      "visibleFragments": 1120,
+      "shaderErrors": [],
+      "drawCalls": 977,
+      "triangles": 2147447,
+      "memory": {
+        "geometries": 330,
+        "textures": 46
+      },
+      "programs": 88
+    },
+    {
+      "name": "debris_07.png",
+      "t": 134,
+      "location": "street",
+      "playing": false,
+      "free": true,
+      "speed": 1,
+      "shot": 12,
+      "position": [
+        8.000000000000004,
+        12.000000000000002,
+        11.000000000000007
+      ],
+      "target": [
+        -9,
+        3.4999999999999996,
+        -23
+      ],
+      "fov": 53,
+      "damageCount": 46,
+      "visibleFragments": 1120,
+      "shaderErrors": [],
+      "drawCalls": 969,
+      "triangles": 2146895,
+      "memory": {
+        "geometries": 330,
+        "textures": 46
+      },
+      "programs": 88
+    },
+    {
+      "name": "debris_08.png",
+      "t": 145,
+      "location": "street",
+      "playing": false,
+      "free": true,
+      "speed": 1,
+      "shot": 13,
+      "position": [
+        8.000000000000004,
+        12.000000000000002,
+        11.000000000000007
+      ],
+      "target": [
+        -9,
+        3.4999999999999996,
+        -23
+      ],
+      "fov": 53,
+      "damageCount": 46,
+      "visibleFragments": 1120,
+      "shaderErrors": [],
+      "drawCalls": 969,
+      "triangles": 2146895,
+      "memory": {
+        "geometries": 330,
+        "textures": 46
+      },
+      "programs": 88
+    }
+  ],
+  "build_sha256": "f64699ad5909280194b247728a0f3380a902b88dd0b2f99b71646b25c92e9f33",
+  "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3050 Ti Laptop GPU (0x000025A0) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "collapse": {
+    "houses": 46,
+    "structuralPieces": 644,
+    "settledAtEnd": 644,
+    "groundViolations": 0
+  },
+  "physics": [
+    {
+      "start": 73.5,
+      "location": "port",
+      "gravity": 9.81,
+      "integrationHz": 120,
+      "samplingHz": 30,
+      "fragmentCount": 280,
+      "floorContacts": 747,
+      "wallContacts": 0,
+      "roofContacts": 0,
+      "floorViolations": 0,
+      "maxContactEnergyRatio": 1,
+      "settledAtEnd": 280
+    },
+    {
+      "start": 98,
+      "location": "hospital",
+      "gravity": 9.81,
+      "integrationHz": 120,
+      "samplingHz": 30,
+      "fragmentCount": 280,
+      "floorContacts": 726,
+      "wallContacts": 0,
+      "roofContacts": 0,
+      "floorViolations": 0,
+      "maxContactEnergyRatio": 1,
+      "settledAtEnd": 280
+    },
+    {
+      "start": 100.5,
+      "location": "hospital",
+      "gravity": 9.81,
+      "integrationHz": 120,
+      "samplingHz": 30,
+      "fragmentCount": 280,
+      "floorContacts": 744,
+      "wallContacts": 0,
+      "roofContacts": 0,
+      "floorViolations": 0,
+      "maxContactEnergyRatio": 1,
+      "settledAtEnd": 280
+    },
+    {
+      "start": 126,
+      "location": "street",
+      "gravity": 9.81,
+      "integrationHz": 120,
+      "samplingHz": 30,
+      "fragmentCount": 280,
+      "floorContacts": 747,
+      "wallContacts": 3,
+      "roofContacts": 3,
+      "floorViolations": 0,
+      "maxContactEnergyRatio": 1,
+      "settledAtEnd": 280
+    },
+    {
+      "start": 127.1,
+      "location": "street",
+      "gravity": 9.81,
+      "integrationHz": 120,
+      "samplingHz": 30,
+      "fragmentCount": 280,
+      "floorContacts": 740,
+      "wallContacts": 5,
+      "roofContacts": 1,
+      "floorViolations": 0,
+      "maxContactEnergyRatio": 1,
+      "settledAtEnd": 280
+    },
+    {
+      "start": 128.4,
+      "location": "street",
+      "gravity": 9.81,
+      "integrationHz": 120,
+      "samplingHz": 30,
+      "fragmentCount": 280,
+      "floorContacts": 699,
+      "wallContacts": 52,
+      "roofContacts": 31,
+      "floorViolations": 0,
+      "maxContactEnergyRatio": 1,
+      "settledAtEnd": 280
+    },
+    {
+      "start": 130,
+      "location": "street",
+      "gravity": 9.81,
+      "integrationHz": 120,
+      "samplingHz": 30,
+      "fragmentCount": 280,
+      "floorContacts": 700,
+      "wallContacts": 64,
+      "roofContacts": 31,
+      "floorViolations": 0,
+      "maxContactEnergyRatio": 1,
+      "settledAtEnd": 280
+    }
+  ],
+  "full_playback_wall_seconds": 52.51341760000105,
+  "end_state": {
+    "t": 210,
+    "location": "after",
+    "playing": false,
+    "free": false,
+    "speed": 4,
+    "shot": 18,
+    "position": [
+      39,
+      40,
+      71.99999999999999
+    ],
+    "target": [
+      0,
+      2,
+      -24
+    ],
+    "fov": 49,
+    "damageCount": 46,
+    "visibleFragments": 1120,
+    "shaderErrors": [],
+    "drawCalls": 963,
+    "triangles": 2146067,
+    "memory": {
+      "geometries": 332,
+      "textures": 46
+    },
+    "programs": 88
+  },
+  "finite_camera": true
+}

@@ -1,0 +1,7 @@
+{
+  "html_sha256": "f64699ad5909280194b247728a0f3380a902b88dd0b2f99b71646b25c92e9f33",
+  "byte_identical_rebundle": true,
+  "functional_reports_matched": 2,
+  "visual_report_matched": true,
+  "performance_report_matched": true
+}

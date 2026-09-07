@@ -1,0 +1,43 @@
+[
+  {
+    "file": "references/longbien.jpg",
+    "author": "Marki Wolf Cobain",
+    "date": "2009-06-01",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:C%E1%BA%A7u_Long_Bi%C3%AAn_(Doumer).jpg",
+    "modifications": "Resized and JPEG-compressed for local educational reference display; not represented as a photograph of the reconstructed event."
+  },
+  {
+    "file": "references/huutiep.jpg",
+    "author": "fredsharples",
+    "date": "2007-11-20",
+    "license": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Downed_American_B52_in_Huu_Tiep_Lake_(2091869957).jpg",
+    "modifications": "Resized and JPEG-compressed for local educational reference display; not represented as a photograph of the reconstructed event."
+  },
+  {
+    "file": "references/v2/b52_drop.jpg",
+    "author": "United States Air Force",
+    "date": "circa 1965-1972",
+    "license": "Public domain in the United States, U.S. federal government work",
+    "source": "https://commons.wikimedia.org/wiki/File:B-52D_dropping_bombs_over_Vietnam.jpg",
+    "caution": "Individual serial/loss-date caption not adopted in the film.",
+    "modifications": "Resized and JPEG-compressed for local educational reference display; not represented as a photograph of the reconstructed event."
+  },
+  {
+    "file": "references/v2/b52_front.jpg",
+    "author": "United States Air Force; NARA 542312 / 342-AF-109171",
+    "date": "1972-10-30",
+    "license": "Public domain in the United States, U.S. federal government work",
+    "source": "https://commons.wikimedia.org/wiki/File:B-52D_approaching_U-Tapao_1972.jpg",
+    "modifications": "Resized and JPEG-compressed for local educational reference display; not represented as a photograph of the reconstructed event."
+  },
+  {
+    "file": "references/v2/bridge_under.jpg",
+    "author": "Amenoc",
+    "date": "2017-09-13",
+    "license": "CC0 1.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Under_Long_Bien_bridge_detail.jpg",
+    "modifications": "Resized and JPEG-compressed for local educational reference display; not represented as a photograph of the reconstructed event."
+  }
+]

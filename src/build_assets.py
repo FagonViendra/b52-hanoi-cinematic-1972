@@ -333,7 +333,14 @@ for z in [-.9,.9]: tor('rubber',(0,.70,z),.67,.036,(0,math.pi/2,0)); tor('steel'
 for a,b in [((0,.7,-.9),(0,.8,.0)),((0,.8,0),(0,.7,.9)),((0,.7,-.9),(0,1.55,-.35)),((0,1.55,-.35),(0,.8,0)),((0,1.55,-.35),(0,1.55,.65)),((0,1.55,.65),(0,.8,0)),((0,1.55,.65),(0,.7,.9))]: beam('greenwood',a,b,.028,n=6)
 box('black',(0,1.6,-.35),(.28,.08,.38)); beam('steel',(-.32,1.82,.62),(.32,1.82,.62),.025,n=6)
 
-DATA={'format':'B52-parametric-v1','seed':19721218,'units':'metres','up':'Y','authoring':'Blender 5.1 + src/build_assets.py','materials':M,'assets':A,'expected_aircraft':{'span_m':56.388,'length_m':47.7012,'engine_count':8,'variant':'B-52D','note':'Representative exterior, not serial-specific; height in flight is not ground height.'}}
+sys.path.insert(0,str(pathlib.Path(__file__).resolve().parent))
+from assets_v2 import rebuild
+V2_AUDIT=rebuild(A,M,ROOT)
+
+DATA={'format':'B52-parametric-v2','seed':19721218,'units':'metres','up':'Y','authoring':'Blender 5.1 + src/build_assets.py','materials':M,'assets':A,'expected_aircraft':{'span_m':56.388,'length_m':47.7012,'engine_count':8,'variant':'B-52D','note':'Representative exterior, not serial-specific; height in flight is not ground height.'}}
+import base64
+DATA['textures']={p.stem:('data:image/png;base64,' if p.suffix=='.png' else 'data:image/jpeg;base64,')+base64.b64encode(p.read_bytes()).decode('ascii') for p in (ROOT/'assets/textures').glob('*') if p.suffix in ['.jpg','.png']}
+DATA['design_v2']=V2_AUDIT
 (ROOT/'assets'/'recipe.json').write_text(json.dumps(DATA,separators=(',',':')),encoding='utf-8')
 print('RECIPE',len(json.dumps(DATA)),len(A),'assets',sum(len(x) for x in A.values()),'operations',flush=True)
 try: import bpy
@@ -346,16 +353,33 @@ for name,d in M.items():
  # Blender node values are linear; convert authored sRGB colors.
  rgb=[x/12.92 if x<=.04045 else ((x+.055)/1.055)**2.4 for x in rgb]
  bs.inputs['Base Color'].default_value=(*rgb,1); bs.inputs['Roughness'].default_value=d.get('rough',.8); bs.inputs['Metallic'].default_value=d.get('metal',0)
- if name=='air':
-  tex=nd.new('ShaderNodeTexNoise'); tex.inputs['Scale'].default_value=.18; tex.inputs['Detail'].default_value=1.3
-  ramp=nd.new('ShaderNodeValToRGB'); ramp.color_ramp.interpolation='CONSTANT'; e=ramp.color_ramp.elements; e[0].position=.30; e[0].color=(.035,.055,.035,1); e[1].position=.58; e[1].color=(.24,.21,.12,1); e.new(.44).color=(.12,.15,.07,1)
-  m.node_tree.links.new(tex.outputs['Fac'],ramp.inputs['Fac']); m.node_tree.links.new(ramp.outputs['Color'],bs.inputs['Base Color'])
+ texture_path=ROOT/'assets/textures'/((d.get('tex') or '')+'.jpg')
+ if texture_path.is_file():
+  tex=nd.new('ShaderNodeTexImage'); tex.image=bpy.data.images.load(str(texture_path),check_existing=True);tex.image.pack()
+  if name=='air':m.node_tree.links.new(tex.outputs['Color'],bs.inputs['Base Color'])
+  else:
+   mix=nd.new('ShaderNodeMixRGB');mix.blend_type='MULTIPLY';mix.inputs[0].default_value=1;mix.inputs[2].default_value=(*rgb,1);m.node_tree.links.new(tex.outputs['Color'],mix.inputs[1]);m.node_tree.links.new(mix.outputs[0],bs.inputs['Base Color'])
+  if name!='air':
+   bump=nd.new('ShaderNodeBump');bump.inputs['Strength'].default_value=.20;bump.inputs['Distance'].default_value=.065 if d.get('tex')=='tilesv2' else .025;m.node_tree.links.new(tex.outputs['Color'],bump.inputs['Height']);m.node_tree.links.new(bump.outputs['Normal'],bs.inputs['Normal'])
  matlib[name]=m
 
 def cv(p): return (p[0],-p[2],p[1])
 def rawmesh(n,vs,fs,ma,smooth=False):
  me=bpy.data.meshes.new(n); me.from_pydata([cv(p) for p in vs],[],fs); me.update(); ob=bpy.data.objects.new(n,me); bpy.context.collection.objects.link(ob); ob.data.materials.append(matlib[ma]);
- for f in me.polygons: f.use_smooth=smooth
+ if ma=='air':ob.data.materials.append(matlib['black'])
+ uv=me.uv_layers.new(name='UVMap')
+ for f in me.polygons:
+  f.use_smooth=smooth
+  if ma=='air' and f.normal.z<-.40:f.material_index=1
+  for li in f.loop_indices:
+   co=me.vertices[me.loops[li].vertex_index].co;x,y,z=co.x,co.z,-co.y
+   if ma=='air':u,v=(x+30)/60,1-(z+25)/50
+   else:
+    nx,ny,nz=abs(f.normal.x),abs(f.normal.z),abs(f.normal.y);scale=1 if M[ma].get('tex') in ['tilesv2','brickv2'] else .50 if M[ma].get('tex')=='masonry' else .25
+    if ny>nx and ny>nz:u,v=x*scale,z*scale
+    elif nx>nz:u,v=z*scale,y*scale
+    else:u,v=x*scale,y*scale
+   uv.data[li].uv=(u,v)
  return ob
 
 def localmat(rot):
@@ -383,7 +407,13 @@ def makeop(rec,n):
     vs.append([x,cy+(t if j<=steps else -t),lead+f*chord])
   ns=steps*2
   for i in range(len(secs)-1):
-   for j in range(ns): fs.append([i*ns+j,i*ns+(j+1)%ns,(i+1)*ns+(j+1)%ns,(i+1)*ns+j])
+   for j in range(ns):
+    f=[i*ns+j,i*ns+(j+1)%ns,(i+1)*ns+(j+1)%ns,(i+1)*ns+j]
+    if secs[0][0]>secs[-1][0]:f.reverse()
+    fs.append(f)
+  end=list(range((len(secs)-1)*ns,len(secs)*ns));start=list(reversed(range(ns)))
+  if secs[0][0]>secs[-1][0]:end.reverse();start.reverse()
+  fs.extend([start,end])
  elif k=='beam':
   a,b,r1,r2,seg=d; smooth=True; va=Vector(a); vb=Vector(b); axis=(vb-va).normalized(); u=axis.cross(Vector((0,1,0)))
   if u.length<.001: u=axis.cross(Vector((1,0,0)))

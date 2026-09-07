@@ -1,0 +1,324 @@
+{
+  "load_seconds": 3.964031934738159,
+  "ready": true,
+  "bridge_wide": {
+    "t": 6,
+    "location": "bridge",
+    "playing": false,
+    "free": false,
+    "speed": 1,
+    "shot": 0,
+    "position": [
+      -116.28462616864947,
+      27.89216393087261,
+      146.90690161979936
+    ],
+    "target": [
+      4.723032069970845,
+      10,
+      0
+    ],
+    "fov": 46,
+    "damageCount": 46,
+    "visibleFragments": 0,
+    "shaderErrors": [],
+    "drawCalls": 317,
+    "triangles": 953663,
+    "memory": {
+      "geometries": 314,
+      "textures": 41
+    },
+    "programs": 69
+  },
+  "bridge_close": {
+    "t": 20,
+    "location": "bridge",
+    "playing": false,
+    "free": false,
+    "speed": 1,
+    "shot": 1,
+    "position": [
+      90.06043608999744,
+      10.976864243702572,
+      19.916751039240815
+    ],
+    "target": [
+      -2.5,
+      11,
+      0
+    ],
+    "fov": 43,
+    "damageCount": 46,
+    "visibleFragments": 0,
+    "shaderErrors": [],
+    "drawCalls": 315,
+    "triangles": 953183,
+    "memory": {
+      "geometries": 314,
+      "textures": 41
+    },
+    "programs": 69
+  },
+  "b52_hero": {
+    "t": 31,
+    "location": "air",
+    "playing": false,
+    "free": false,
+    "speed": 1,
+    "shot": 2,
+    "position": [
+      65.61439792316845,
+      113.89137915637993,
+      -73.26979416981075
+    ],
+    "target": [
+      0,
+      93,
+      -0.37615740740740744
+    ],
+    "fov": 43,
+    "damageCount": 46,
+    "visibleFragments": 0,
+    "shaderErrors": [],
+    "drawCalls": 24,
+    "triangles": 62936,
+    "memory": {
+      "geometries": 314,
+      "textures": 41
+    },
+    "programs": 73
+  },
+  "b52_cockpit": {
+    "t": 42,
+    "location": "air",
+    "playing": false,
+    "free": false,
+    "speed": 1,
+    "shot": 3,
+    "position": [
+      -22.75597020416142,
+      100.35422105860229,
+      -39.015774972728316
+    ],
+    "target": [
+      0,
+      94,
+      -15
+    ],
+    "fov": 43,
+    "damageCount": 46,
+    "visibleFragments": 0,
+    "shaderErrors": [],
+    "drawCalls": 24,
+    "triangles": 62936,
+    "memory": {
+      "geometries": 314,
+      "textures": 41
+    },
+    "programs": 73
+  },
+  "b52_release": {
+    "t": 50,
+    "location": "air",
+    "playing": false,
+    "free": false,
+    "speed": 1,
+    "shot": 4,
+    "position": [
+      39.40740740740741,
+      56.44444444444445,
+      43.33333333333334
+    ],
+    "target": [
+      0,
+      84.22222222222223,
+      0.7407407407407407
+    ],
+    "fov": 57,
+    "damageCount": 46,
+    "visibleFragments": 0,
+    "shaderErrors": [],
+    "drawCalls": 26,
+    "triangles": 33754,
+    "memory": {
+      "geometries": 315,
+      "textures": 41
+    },
+    "programs": 74
+  },
+  "street_before": {
+    "t": 118,
+    "location": "street",
+    "playing": false,
+    "free": false,
+    "speed": 1,
+    "shot": 10,
+    "position": [
+      0.3,
+      2.9,
+      58
+    ],
+    "target": [
+      0,
+      4,
+      -25.5
+    ],
+    "fov": 50,
+    "damageCount": 0,
+    "visibleFragments": 0,
+    "shaderErrors": [],
+    "drawCalls": 705,
+    "triangles": 1765215,
+    "memory": {
+      "geometries": 318,
+      "textures": 44
+    },
+    "programs": 77
+  },
+  "impact_055": {
+    "t": 126.55,
+    "location": "street",
+    "playing": false,
+    "free": false,
+    "speed": 1,
+    "shot": 11,
+    "position": [
+      18.71278043580175,
+      15.178440220529517,
+      12.30232826953712
+    ],
+    "target": [
+      -7.24003369140625,
+      4.24003369140625,
+      -16.4800673828125
+    ],
+    "fov": 53,
+    "damageCount": 11,
+    "visibleFragments": 280,
+    "shaderErrors": [],
+    "drawCalls": 916,
+    "triangles": 2102537,
+    "memory": {
+      "geometries": 320,
+      "textures": 44
+    },
+    "programs": 83
+  },
+  "impact_100": {
+    "t": 127,
+    "location": "street",
+    "playing": false,
+    "free": false,
+    "speed": 1,
+    "shot": 11,
+    "position": [
+      18.302712632286433,
+      14.922308762690143,
+      11.762123043902347
+    ],
+    "target": [
+      -7.31640625,
+      4.31640625,
+      -16.6328125
+    ],
+    "fov": 53,
+    "damageCount": 11,
+    "visibleFragments": 280,
+    "shaderErrors": [],
+    "drawCalls": 914,
+    "triangles": 2102533,
+    "memory": {
+      "geometries": 320,
+      "textures": 44
+    },
+    "programs": 83
+  },
+  "impact_late": {
+    "t": 130.3,
+    "location": "street",
+    "playing": false,
+    "free": false,
+    "speed": 1,
+    "shot": 11,
+    "position": [
+      15.542885740576002,
+      12.550331352549504,
+      7.801999165080402
+    ],
+    "target": [
+      -7.883722656250002,
+      4.883722656250002,
+      -17.7674453125
+    ],
+    "fov": 53,
+    "damageCount": 37,
+    "visibleFragments": 1120,
+    "shaderErrors": [],
+    "drawCalls": 992,
+    "triangles": 2148529,
+    "memory": {
+      "geometries": 323,
+      "textures": 44
+    },
+    "programs": 83
+  },
+  "street_after": {
+    "t": 145,
+    "location": "street",
+    "playing": false,
+    "free": false,
+    "speed": 1,
+    "shot": 13,
+    "position": [
+      -38.78390506980635,
+      25.668586829534682,
+      38.10860121030571
+    ],
+    "target": [
+      0,
+      3,
+      -7.87152516904583
+    ],
+    "fov": 51,
+    "damageCount": 46,
+    "visibleFragments": 1120,
+    "shaderErrors": [],
+    "drawCalls": 989,
+    "triangles": 2148283,
+    "memory": {
+      "geometries": 323,
+      "textures": 44
+    },
+    "programs": 83
+  },
+  "lake": {
+    "t": 175,
+    "location": "lake",
+    "playing": false,
+    "free": false,
+    "speed": 1,
+    "shot": 15,
+    "position": [
+      4.695829803586109,
+      3.913230718657864,
+      16.14432313820558
+    ],
+    "target": [
+      -1,
+      1.8,
+      1
+    ],
+    "fov": 47,
+    "damageCount": 46,
+    "visibleFragments": 0,
+    "shaderErrors": [],
+    "drawCalls": 727,
+    "triangles": 968623,
+    "memory": {
+      "geometries": 323,
+      "textures": 44
+    },
+    "programs": 84
+  },
+  "errors": []
+}

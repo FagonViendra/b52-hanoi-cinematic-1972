@@ -1,0 +1,6 @@
+{
+  "check": "git -c core.whitespace=cr-at-eol,-blank-at-eof diff --check",
+  "exit_code": 0,
+  "output": "",
+  "note": "Windows CRLF accepted; generated embedded-image artifacts are non-diff attributes and separately SHA-256 verified."
+}

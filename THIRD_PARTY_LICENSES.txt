@@ -23,4 +23,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-Reference photos: CC BY 2.0. Full attribution in the HTML archive and HISTORY_SOURCES.md.
+Reference photos: two CC BY 2.0, one CC0 1.0 and two U.S. Air Force public-domain-in-the-USA images. Full attribution and dates: HTML archive and HISTORY_V2.md. Original procedural textures are project-authored. No font files are distributed.
